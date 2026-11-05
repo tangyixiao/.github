@@ -2,10 +2,33 @@
   "repo": "tangyixiao/.github",
   "sourceBranch": "main",
   "sourceCommit": "aa15edb79ec0efd73399f3c8e121e0c5328a4e47",
+  "designVersion": 3,
+  "direction": {
+    "visualConcept": "石墨、雾白与硫黄色的小型仓库铭牌：以 .github 一行大字和一张 README 文件页占据主画面，故意保留稀疏构图，用清楚的文件/历史入口收束。事实边界：当前根目录只有 README.md，不能把视觉空位填成社区模板、CI、组织制度或自动化产品。",
+    "layout": "poster",
+    "palette": {
+      "light": {
+        "bg": "#DCDCD6",
+        "surface": "#F5F4EA",
+        "ink": "#262720",
+        "muted": "#5e6156",
+        "accent": "#636416"
+      },
+      "dark": {
+        "bg": "#20221B",
+        "surface": "#303329",
+        "ink": "#F1F1DA",
+        "muted": "#afb39c",
+        "accent": "#dde66b"
+      }
+    },
+    "threeConcept": "Three.js 制作一块只有 .github 刻字的石墨文件封套与一张 README 纸页；封套背面保持空白，不安排不存在的工作流文件。用户可轻转封套查看真实文件名。",
+    "distinctiveInteraction": "点 README 将薄页展开为真实一行内容；点历史或源码跳往 GitHub，空白区域维持空白，不生成示例功能。"
+  },
   "media": [],
   "skills": [
     "baoyu-design",
     "design-taste-frontend"
   ],
-  "design": "content-first source/product/photography; no rejected template or faux 3D"
+  "flagshipModel": null
 }
