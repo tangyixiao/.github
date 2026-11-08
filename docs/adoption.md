@@ -20,6 +20,24 @@ information. Replace the illustrative interface with a real screenshot if availa
 with accurate alternative text and caption. The sample's OJ NEXUS release links are
 real, but belong to OJ NEXUS; update them before publishing another project.
 
+The approved default appearance is light. Set `theme` to `system` in `project.json`
+to follow the visitor's dark/light system preference, then render again.
+
+The optional `platforms` array supplies service names, links and local `logo`
+paths. Use `wordmark: true` for artwork that already contains the full name;
+otherwise the platform name appears beside its icon. Remove the array for a
+project that does not connect external platforms. The sample marks preserve
+their original colors and proportions; their sources and rights are in `NOTICE`.
+Check the receiving project's intended use against the owner's requirements,
+including AtCoder's media/service notification requirement, before publication.
+
+Each feature group can use `image: {src, alt, caption}` instead of its small
+`preview` rows. Image paths must be local to `site/`; place a real capture or
+original illustration in `site/assets/`. The sample's warm and green SVG panels
+are labeled demonstrations, not application screenshots. Replace or remove the
+OJ-specific marks and illustrations when adopting this for another product.
+Keep captions accurate. Feature images open at full size when selected.
+
 The source-size limits in `.github/toss.json` are budgets for this small starter.
 Review them when adding a real screenshot or application source; choose an explicit
 reasonable budget for that project rather than silently disabling the checks.

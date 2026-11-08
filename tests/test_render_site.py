@@ -121,6 +121,32 @@ class HomepageTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             renderer.validate_config(self.config)
 
+    def test_optional_platforms_and_feature_images(self):
+        result = renderer.render(self.config)
+        images = Images()
+        images.feed(result)
+        self.assertTrue(any(image.get("src") == "assets/brands/luogu.png" and
+                            image.get("alt") == "洛谷" for image in images.images))
+        feature = self.config["features"]["groups"][0]
+        feature.pop("preview", None)
+        self.assertIn(html.escape(feature["image"]["alt"]), result)
+        self.assertIn('href="' + feature["image"]["src"] + '"', result)
+        for key, location in (("logo", self.config["platforms"][0]),
+                              ("src", feature["image"])):
+            original = location[key]
+            for unsafe in ("../private.png", "https://example.com/tracker.png", "data:image/svg+xml,x"):
+                with self.subTest(key=key, value=unsafe):
+                    location[key] = unsafe
+                    with self.assertRaises(ValueError):
+                        renderer.validate_config(self.config)
+            location[key] = original
+        self.config.pop("platforms")
+        feature.pop("image")
+        feature["preview"] = {"title": "Notes", "theme": "light", "rows": [{"title": "Read", "meta": ""}]}
+        fallback = renderer.render(self.config)
+        self.assertNotIn('class="platforms"', fallback)
+        self.assertIn('class="mini-preview mini-light"', fallback)
+
     def cli(self, root, *args):
         return subprocess.run(
             [sys.executable, "-B", str(root / "scripts/render_site.py"), *args], cwd=root,

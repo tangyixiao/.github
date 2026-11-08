@@ -81,11 +81,20 @@ def _icon(value, location):
         raise ValueError(f"{location} must be one of {', '.join(ICONS)}")
 
 
+def _image(value, location):
+    value = _object(value, location)
+    _url(value.get("src"), f"{location}.src", image=True)
+    _text(value.get("alt"), f"{location}.alt")
+    _text(value.get("caption"), f"{location}.caption")
+
+
 def validate_config(config: dict) -> None:
     """Reject missing content and unsafe URLs before producing any HTML."""
     c = _object(config, "config")
     if c.get("schema_version") != 1:
         raise ValueError("schema_version must be 1")
+    if c.get("theme", "light") not in ("light", "system"):
+        raise ValueError("theme must be light or system")
     if not re.fullmatch(r"[a-zA-Z]{2,3}(?:-[a-zA-Z0-9]{2,8})*", _text(c.get("language"), "language")):
         raise ValueError("language must be a valid language tag")
     _text(c.get("name"), "name")
@@ -102,14 +111,18 @@ def validate_config(config: dict) -> None:
     for key in ("primary_action", "secondary_action"):
         _action(hero.get(key), f"hero.{key}")
     _text(hero.get("release_note"), "hero.release_note")
+    for i, platform in enumerate(_list(c.get("platforms", []), "platforms", minimum=0, maximum=8)):
+        platform = _object(platform, f"platforms[{i}]")
+        _text(platform.get("name"), f"platforms[{i}].name")
+        _url(platform.get("href"), f"platforms[{i}].href")
+        _url(platform.get("logo"), f"platforms[{i}].logo", image=True)
+        if not isinstance(platform.get("wordmark", False), bool):
+            raise ValueError(f"platforms[{i}].wordmark must be a boolean")
     preview = _object(c.get("preview"), "preview")
     _text(preview.get("caption"), "preview.caption")
     image = preview.get("image")
     if image is not None:
-        image = _object(image, "preview.image")
-        _url(image.get("src"), "preview.image.src", image=True)
-        _text(image.get("alt"), "preview.image.alt")
-        _text(image.get("caption"), "preview.image.caption")
+        _image(image, "preview.image")
     for i, tab in enumerate(_list(preview.get("tabs"), "preview.tabs", maximum=5)):
         tab = _object(tab, f"preview.tabs[{i}]")
         _text(tab.get("label"), f"preview.tabs[{i}].label")
@@ -126,6 +139,9 @@ def validate_config(config: dict) -> None:
         for key in ("title", "description", "detail"):
             _text(group.get(key), f"features.groups[{i}].{key}", empty=key == "detail")
         _icon(group.get("icon"), f"features.groups[{i}].icon")
+        if group.get("image") is not None:
+            _image(group["image"], f"features.groups[{i}].image")
+            continue
         mini = _object(group.get("preview"), f"features.groups[{i}].preview")
         _text(mini.get("title"), f"features.groups[{i}].preview.title")
         if mini.get("theme") not in ("light", "dark"):
@@ -195,18 +211,41 @@ def _product_preview(c):
 
 
 def _feature(group):
+    detail = f'<p class="feature-detail">{_escape(group["detail"])}</p>' if group["detail"] else ""
+    copy = (f'<div class="feature-copy"><h3>{_escape(group["title"])}</h3>'
+            f'<p>{_escape(group["description"])}</p>{detail}</div>')
+    if group.get("image") is not None:
+        image = group["image"]
+        return (f'<article class="feature feature-with-image">{copy}'
+                f'<figure class="feature-image"><a href="{_escape(image["src"])}" '
+                f'aria-label="{_escape(group["title"])}：查看完整演示图">'
+                f'<img src="{_escape(image["src"])}" alt="{_escape(image["alt"])}" '
+                f'loading="lazy" decoding="async"></a>'
+                f'<figcaption>{_escape(image["caption"])}</figcaption></figure></article>')
     mini = group["preview"]
     rows = "".join(
         f'<div class="mini-row"><div><strong>{_escape(row["title"])}</strong>'
         f'{"<span>" + _escape(row["meta"]) + "</span>" if row["meta"] else ""}'
         f'</div><span class="chevron" aria-hidden="true">›</span></div>' for row in mini["rows"]
     )
-    detail = f'<p class="feature-detail">{_escape(group["detail"])}</p>' if group["detail"] else ""
     return (f'<article class="feature"><span class="feature-icon">{_svg(group["icon"])}</span>'
-            f'<div class="feature-copy"><h3>{_escape(group["title"])}</h3>'
-            f'<p>{_escape(group["description"])}</p>{detail}</div>'
+            f'{copy}'
             f'<div class="mini-preview mini-{mini["theme"]}" aria-hidden="true">'
             f'<div class="mini-title">{_escape(mini["title"])}</div>{rows}</div></article>')
+
+
+def _platforms(platforms):
+    if not platforms:
+        return ""
+    links = []
+    for platform in platforms:
+        wordmark = platform.get("wordmark", False)
+        label = "" if wordmark else f'<span>{_escape(platform["name"])}</span>'
+        alt = _escape(platform["name"]) if wordmark else ""
+        links.append(f'<a class="platform-link{" wordmark" if wordmark else ""}" '
+                     f'href="{_escape(platform["href"])}"><img src="{_escape(platform["logo"])}" '
+                     f'alt="{alt}" decoding="async">{label}</a>')
+    return f'<nav class="platforms" aria-label="连接的平台">{"".join(links)}</nav>'
 
 
 def render(config: dict) -> str:
@@ -221,6 +260,7 @@ def render(config: dict) -> str:
     )
     values = {
         "LANGUAGE": _escape(c["language"]),
+        "THEME": _escape(c.get("theme", "light")),
         "META_TITLE": _escape(c["meta"]["title"]),
         "META_DESCRIPTION": _escape(c["meta"]["description"]),
         "NAME": _escape(c["name"]),
@@ -228,6 +268,7 @@ def render(config: dict) -> str:
         "REPOSITORY": _link(c["repository"], "repository-link", ' <span aria-hidden="true">↗</span>'),
         "HERO_TITLE": "<br>".join(_escape(line) for line in c["hero"]["title"]),
         "HERO_DESCRIPTION": "".join(f'<p>{_escape(p)}</p>' for p in c["hero"]["description"]),
+        "PLATFORMS": _platforms(c.get("platforms", [])),
         "HERO_ACTIONS": _link(c["hero"]["primary_action"], "button button-primary") + _link(c["hero"]["secondary_action"], "button button-secondary"),
         "RELEASE_NOTE": _escape(c["hero"]["release_note"]),
         "PRODUCT_PREVIEW": _product_preview(c),

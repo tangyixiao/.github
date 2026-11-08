@@ -1,10 +1,33 @@
 Tangyixiao Open Source Standard (TOSS)
 Copyright 2026 Tang Yixiao and contributors
 
-Original documents, tooling, and site assets in this repository are provided
+Original documents, tooling, and original site assets in this repository are provided
 under the Apache License, Version 2.0. Project names and third-party links are
 used for identification; they do not imply affiliation or endorsement.
 
 The LICENSE file is the standard Apache License text from the Apache Software
-Foundation. No third-party fonts, image assets, analytics, or frontend packages
-are bundled with the sample website.
+Foundation. No third-party fonts, analytics, or frontend packages are bundled.
+
+The following unmodified platform marks identify the services in the OJ NEXUS
+example. Their trademarks and artwork remain the property of their respective
+owners and are not relicensed under this repository's Apache-2.0 license.
+Source pages and assets were checked on 2026-11-08:
+
+- Codeforces: https://codeforces.com/
+  Official favicon: https://codeforces.com/codeforces.org/s/95148/favicon-96x96.png
+  Local file: site/assets/brands/codeforces.png
+- AtCoder: https://atcoder.jp/
+  Official apple-touch-icon: https://img.atcoder.jp/assets/atcoder.png
+  Local file: site/assets/brands/atcoder.png
+  Usage guide: https://info.atcoder.jp/logoguide
+  This is the homepage touch icon, not one of the guide's three downloadable
+  logo files. The guide requests notification for media/service use and prohibits
+  distortion, recoloring, hotlinking and implied endorsement. No notification
+  has been sent on the adopter's behalf, and no extra permission is claimed.
+- Luogu: https://www.luogu.com.cn/
+  Official logo: https://fecdn.luogu.com.cn/columba/static.08b304e3faa27052.logo-full.png
+  Local file: site/assets/brands/luogu.png
+
+The two site/assets/demo/*.svg files are original illustrative interface
+diagrams. They are labeled demonstrations and are not application screenshots
+or evidence of actual submissions, scores, or learning progress.
