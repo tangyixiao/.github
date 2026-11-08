@@ -1,0 +1,79 @@
+<svg lang="en" xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+<title id="title">Weekly practice plan and review queue illustration</title>
+<desc id="desc">Flat graphite version. Illustration of a weekly practice plan, binary search topic, and two items to review. This is a layout illustration, not an app screenshot, learning result, or real user data.</desc>
+<defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif}
+.ink{fill:#e6e8ec}.muted{fill:#a3aab5}.small{font-size:18px}.body{font-size:22px}.strong{font-weight:650}
+.compact-view{display:none}@media(max-width:450px){.wide-view{display:none}.compact-view{display:inline}}
+</style>
+</defs>
+<g class="wide-view">
+<rect width="900" height="500" rx="24" fill="#191b1f"/>
+<text x="34" y="53" font-size="28" class="ink strong">Practice plan</text>
+<rect x="760" y="25" width="108" height="34" rx="17" fill="#2e3035"/>
+<text x="814" y="48" text-anchor="middle" class="small muted">Illustration</text>
+<rect x="32" y="79" width="836" height="166" rx="17" fill="#222428" stroke="#3a3d43"/>
+<text x="54" y="113" font-size="20" class="ink strong">This week</text>
+<text x="846" y="113" text-anchor="end" class="small muted">Practice, then review</text>
+<path d="M54 129h792" stroke="#383c42"/>
+<text x="104" y="158" text-anchor="middle" class="small muted">Mon</text>
+<text x="219" y="158" text-anchor="middle" class="small muted">Tue</text>
+<text x="334" y="158" text-anchor="middle" class="small muted">Wed</text>
+<text x="449" y="158" text-anchor="middle" class="small muted">Thu</text>
+<text x="564" y="158" text-anchor="middle" class="small muted">Fri</text>
+<text x="679" y="158" text-anchor="middle" class="small muted">Sat</text>
+<text x="794" y="158" text-anchor="middle" class="small muted">Sun</text>
+<rect x="56" y="172" width="96" height="49" rx="9" fill="#2d3034"/>
+<text x="104" y="203" text-anchor="middle" font-size="20" class="ink">Prefix</text>
+<rect x="171" y="172" width="96" height="49" rx="9" fill="#2d3034"/>
+<text x="219" y="203" text-anchor="middle" font-size="20" class="ink">Graphs</text>
+<rect x="286" y="172" width="96" height="49" rx="9" fill="#493e29"/>
+<text x="334" y="203" text-anchor="middle" font-size="20" fill="#dfbe78">Review</text>
+<rect x="401" y="172" width="96" height="49" rx="9" fill="#2a5e4f"/>
+<text x="449" y="203" text-anchor="middle" font-size="20" fill="#f1f3f5" font-weight="600">Binary</text>
+<rect x="516" y="172" width="96" height="49" rx="9" fill="#2d3034"/>
+<text x="564" y="203" text-anchor="middle" font-size="20" class="ink">Data</text>
+<rect x="631" y="172" width="96" height="49" rx="9" fill="#2d3034"/>
+<text x="679" y="203" text-anchor="middle" font-size="20" class="ink">Practice</text>
+<rect x="746" y="172" width="96" height="49" rx="9" fill="#493e29"/>
+<text x="794" y="203" text-anchor="middle" font-size="20" fill="#dfbe78">Review</text>
+<rect x="32" y="265" width="388" height="201" rx="17" fill="#24272b"/>
+<text x="55" y="301" font-size="19" fill="#8fc9b7">Topic practice</text>
+<text x="55" y="344" font-size="29" fill="#f1f3f5" font-weight="650">Binary search</text>
+<text x="55" y="380" class="body" fill="#b5c3bf">One topic at a time</text>
+<rect x="55" y="405" width="109" height="34" rx="8" fill="#30473f"/>
+<text x="109" y="429" text-anchor="middle" class="small" fill="#f1f3f5">Basics</text>
+<rect x="174" y="405" width="109" height="34" rx="8" fill="#30473f"/>
+<text x="228" y="429" text-anchor="middle" class="small" fill="#f1f3f5">Boundaries</text>
+<path d="m369 416 8 8-8 8m-13-8h21" fill="none" stroke="#8fc9b7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="440" y="265" width="428" height="201" rx="17" fill="#222428" stroke="#3a3d43"/>
+<text x="463" y="302" font-size="24" class="ink strong">Review queue</text>
+<text x="845" y="301" text-anchor="end" class="small muted">Revisit your practice</text>
+<path d="M463 320h382" stroke="#383c42"/>
+<circle cx="474" cy="352" r="9" fill="none" stroke="#678c7e" stroke-width="2"/>
+<text x="497" y="361" class="body ink">Range sums</text>
+<rect x="758" y="335" width="87" height="32" rx="8" fill="#493e29"/>
+<text x="801" y="358" text-anchor="middle" class="small" fill="#dfbe78">Review</text>
+<path d="M463 385h382" stroke="#383c42"/>
+<circle cx="474" cy="418" r="9" fill="none" stroke="#678c7e" stroke-width="2"/>
+<text x="497" y="426" class="body ink">Fenwick trees</text>
+<rect x="758" y="400" width="87" height="32" rx="8" fill="#493e29"/>
+<text x="801" y="423" text-anchor="middle" class="small" fill="#dfbe78">Review</text>
+</g>
+<g class="compact-view">
+<rect width="900" height="500" rx="24" fill="#191b1f"/>
+<text x="38" y="65" font-size="40" class="ink strong">Training &amp; review</text>
+<text x="862" y="63" text-anchor="end" font-size="32" class="muted">Illustration</text>
+<rect x="38" y="103" width="824" height="149" rx="17" fill="#24272b"/>
+<text x="70" y="151" font-size="32" fill="#8fc9b7">Topic practice</text>
+<text x="70" y="215" font-size="44" fill="#f1f3f5" class="strong">Binary search</text>
+<text x="824" y="213" text-anchor="end" font-size="32" fill="#b5c3bf">Basics</text>
+<text x="38" y="306" font-size="34" class="ink strong">Review queue</text>
+<path d="M38 326h824m-824 70h824" stroke="#383c42"/>
+<text x="55" y="373" font-size="36" class="ink">Range sums</text>
+<text x="824" y="373" text-anchor="end" font-size="32" fill="#dfbe78">Review</text>
+<text x="55" y="450" font-size="36" class="ink">Fenwick trees</text>
+<text x="824" y="450" text-anchor="end" font-size="32" fill="#dfbe78">Review</text>
+</g>
+</svg>

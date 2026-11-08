@@ -1,0 +1,79 @@
+<svg lang="zh-CN" xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+<title id="title">一周训练安排与复习队列演示</title>
+<desc id="desc">训练与复习示意。宽版展示一周安排，窄版突出二分主题及两条复习项。均为演示示意，不是实测截图、学习成绩或真实用户数据。</desc>
+<defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif}
+.ink{fill:#213e3b}.muted{fill:#667e77}.small{font-size:18px}.body{font-size:22px}.strong{font-weight:650}
+.compact-view{display:none}@media(max-width:450px){.wide-view{display:none}.compact-view{display:inline}}
+</style>
+</defs>
+<g class="wide-view">
+<rect width="900" height="500" rx="24" fill="#edf6f1"/>
+<text x="34" y="53" font-size="28" class="ink strong">训练计划</text>
+<rect x="760" y="25" width="108" height="34" rx="17" fill="#dcece3"/>
+<text x="814" y="48" text-anchor="middle" class="small muted">演示示意</text>
+<rect x="32" y="79" width="836" height="166" rx="17" fill="#fff" stroke="#d6e6dd"/>
+<text x="54" y="113" font-size="20" class="ink strong">一周安排</text>
+<text x="846" y="113" text-anchor="end" class="small muted">按主题练习，留时间回顾</text>
+<path d="M54 129h792" stroke="#e7eee9"/>
+<text x="104" y="158" text-anchor="middle" class="small muted">周一</text>
+<text x="219" y="158" text-anchor="middle" class="small muted">周二</text>
+<text x="334" y="158" text-anchor="middle" class="small muted">周三</text>
+<text x="449" y="158" text-anchor="middle" class="small muted">周四</text>
+<text x="564" y="158" text-anchor="middle" class="small muted">周五</text>
+<text x="679" y="158" text-anchor="middle" class="small muted">周六</text>
+<text x="794" y="158" text-anchor="middle" class="small muted">周日</text>
+<rect x="56" y="172" width="96" height="49" rx="9" fill="#f0f5f2"/>
+<text x="104" y="203" text-anchor="middle" font-size="20" class="ink">前缀和</text>
+<rect x="171" y="172" width="96" height="49" rx="9" fill="#f0f5f2"/>
+<text x="219" y="203" text-anchor="middle" font-size="20" class="ink">图论</text>
+<rect x="286" y="172" width="96" height="49" rx="9" fill="#fcf0d9"/>
+<text x="334" y="203" text-anchor="middle" font-size="20" fill="#8d6b2f">回顾</text>
+<rect x="401" y="172" width="96" height="49" rx="9" fill="#2c7768"/>
+<text x="449" y="203" text-anchor="middle" font-size="20" fill="#fff" font-weight="600">二分</text>
+<rect x="516" y="172" width="96" height="49" rx="9" fill="#f0f5f2"/>
+<text x="564" y="203" text-anchor="middle" font-size="20" class="ink">数据结构</text>
+<rect x="631" y="172" width="96" height="49" rx="9" fill="#f0f5f2"/>
+<text x="679" y="203" text-anchor="middle" font-size="20" class="ink">练习</text>
+<rect x="746" y="172" width="96" height="49" rx="9" fill="#fcf0d9"/>
+<text x="794" y="203" text-anchor="middle" font-size="20" fill="#8d6b2f">回顾</text>
+<rect x="32" y="265" width="388" height="201" rx="17" fill="#2c7768"/>
+<text x="55" y="301" font-size="19" fill="#d5ebe3">主题训练</text>
+<text x="55" y="344" font-size="29" fill="#fff" font-weight="650">二分练习</text>
+<text x="55" y="380" class="body" fill="#e0eee8">集中练习一类问题</text>
+<rect x="55" y="405" width="109" height="34" rx="8" fill="#468878"/>
+<text x="109" y="429" text-anchor="middle" class="small" fill="#fff">基础算法</text>
+<rect x="174" y="405" width="109" height="34" rx="8" fill="#468878"/>
+<text x="228" y="429" text-anchor="middle" class="small" fill="#fff">边界处理</text>
+<path d="m369 416 8 8-8 8m-13-8h21" fill="none" stroke="#d5ebe3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="440" y="265" width="428" height="201" rx="17" fill="#fff" stroke="#d6e6dd"/>
+<text x="463" y="302" font-size="24" class="ink strong">复习队列</text>
+<text x="845" y="301" text-anchor="end" class="small muted">回顾做过的题目</text>
+<path d="M463 320h382" stroke="#e7eee9"/>
+<circle cx="474" cy="352" r="9" fill="none" stroke="#b9d4c7" stroke-width="2"/>
+<text x="497" y="361" class="body ink">区间统计</text>
+<rect x="758" y="335" width="87" height="32" rx="8" fill="#fcf0d9"/>
+<text x="801" y="358" text-anchor="middle" class="small" fill="#8d6b2f">待回顾</text>
+<path d="M463 385h382" stroke="#e7eee9"/>
+<circle cx="474" cy="418" r="9" fill="none" stroke="#b9d4c7" stroke-width="2"/>
+<text x="497" y="426" class="body ink">树状数组</text>
+<rect x="758" y="400" width="87" height="32" rx="8" fill="#fcf0d9"/>
+<text x="801" y="423" text-anchor="middle" class="small" fill="#8d6b2f">待回顾</text>
+</g>
+<g class="compact-view">
+<rect width="900" height="500" rx="24" fill="#edf6f1"/>
+<text x="38" y="65" font-size="40" class="ink strong">训练与复习</text>
+<text x="862" y="63" text-anchor="end" font-size="32" class="muted">演示示意</text>
+<rect x="38" y="103" width="824" height="149" rx="17" fill="#2c7768"/>
+<text x="70" y="151" font-size="32" fill="#d5ebe3">主题训练</text>
+<text x="70" y="215" font-size="44" fill="#fff" class="strong">二分练习</text>
+<text x="824" y="213" text-anchor="end" font-size="32" fill="#e0eee8">基础算法</text>
+<text x="38" y="306" font-size="34" class="ink strong">复习队列</text>
+<path d="M38 326h824m-824 70h824" stroke="#cbded3"/>
+<text x="55" y="373" font-size="36" class="ink">区间统计</text>
+<text x="824" y="373" text-anchor="end" font-size="32" fill="#8d6b2f">待回顾</text>
+<text x="55" y="450" font-size="36" class="ink">树状数组</text>
+<text x="824" y="450" text-anchor="end" font-size="32" fill="#8d6b2f">待回顾</text>
+</g>
+</svg>
