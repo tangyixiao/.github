@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "standard_version": "0.1.0",
+  "repository": "tangyixiao/.github",
+  "kind": "community-defaults",
+  "policy": "Enable every applicable community entry point; keep its purpose and evidence clear.",
+  "desired_settings": {
+    "issues": true,
+    "discussions": true,
+    "wiki": true,
+    "projects": true,
+    "private_vulnerability_reporting": true
+  },
+  "exceptions": {
+    "application_artifacts": "This repository distributes source documents and small tools, not application installers.",
+    "sponsorship": "No eligible sponsorship destination has been confirmed; do not invent a funding link.",
+    "repository_template": "Account community defaults live here; an application starter belongs in a separate template repository."
+  },
+  "resources": {
+    "free_space_reserve_gib": 10,
+    "temporary_growth_warning_gib": 1,
+    "temporary_growth_budget_gib": 2,
+    "max_heavy_jobs_per_machine": 1,
+    "max_log_mib": 20,
+    "repository_source_budget_kib": 512,
+    "site_source_budget_kib": 150,
+    "max_source_file_kib": 256
+  },
+  "enforcement": {
+    "local_source_budgets": "python scripts/check.py",
+    "runtime_resources": "Agent working agreements; use client sandboxes or OS quotas for hard enforcement.",
+    "platform_settings": "Verify separately with the GitHub API or UI; the local checker does not certify live settings."
+  }
+}

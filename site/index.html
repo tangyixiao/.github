@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="TOSS：Tangyixiao 的开源项目运营规范样板。文档、社区、发布与恢复，以及对磁盘空间负责的 AI 工作方式。">
+  <meta name="theme-color" content="#e9eef4">
+  <title>TOSS — 项目要完整，维护要有边界</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至正文</a>
+  <header class="header wrap">
+    <a class="brand" href="./" aria-label="TOSS 首页"><span class="brand-mark" aria-hidden="true">t<span>·</span></span><span>TOSS<span class="brand-sub">Open source, well kept.</span></span></a>
+    <nav aria-label="主导航"><a href="#standard">标准</a><a href="#resources">资源边界</a><a href="#adoption">如何采用</a></nav>
+    <div class="header-actions"><a class="repo-link" href="https://github.com/tangyixiao/.github">GitHub <span aria-hidden="true">↗</span></a><button class="theme-toggle" type="button" aria-label="切换明暗主题" aria-pressed="false" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="proposal-dot" aria-hidden="true"></span>样板提案 <span class="eyebrow-divider">/</span> Proposal</p>
+        <h1 id="hero-title">项目要完整。<br><span>维护要有边界。</span></h1>
+        <p class="hero-description">默认开启所有适用的开源功能。把文档、社区、发布和 AI 工作方式，写成有责任、有边界、可验证的约定。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#standard">阅读标准 <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/tangyixiao/.github/pulls">查看提案与贡献 <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-note">Tangyixiao Open Source Standard<br><span>个人项目也可以完整；维护强度按实际需要安排。</span></p>
+      </div>
+      <aside class="repo-diagram" aria-label="规范的三个作用范围">
+        <div class="diagram-top"><span class="mono">.github</span><span class="diagram-caption">ACCOUNT DEFAULTS</span></div>
+        <p class="diagram-intro">一份公共约定，三个清楚的边界。</p>
+        <div class="diagram-layer"><div class="layer-label"><span class="scope-dot scope-blue" aria-hidden="true"></span><strong>社区默认文件</strong><span class="mono">INHERIT</span></div><div class="file-tree"><a href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/CONTRIBUTING.md">CONTRIBUTING.md</a><span>支持的社区文件可作为账号默认值</span></div></div>
+        <div class="diagram-layer"><div class="layer-label"><span class="scope-dot scope-white" aria-hidden="true"></span><strong>每个项目的配置</strong><span class="mono">ADOPT</span></div><div class="file-tree"><span>README · LICENSE · Workflows</span><span>项目核验、显式采用、分别维护</span></div></div>
+        <div class="diagram-layer"><div class="layer-label"><span class="scope-dot scope-outline" aria-hidden="true"></span><strong>本机 agent 规则</strong><span class="mono">LOAD</span></div><div class="file-tree"><span>AGENTS.md · work/ · outputs/</span><span>客户端加载规则，任务负责收尾</span></div></div>
+        <div class="diagram-foot"><span aria-hidden="true">↳</span><p>AGENTS、工作流和许可证不会因这个仓库<br class="desktop-break">而自动成为所有项目的配置。</p></div>
+      </aside>
+    </section>
+
+    <div class="status-note wrap"><span class="status-label">当前状态</span><p>这是供评审的样板。文件内容、GitHub 设置、部署结果需要分别验收；本页不表示这些配置已经在其他项目生效。</p></div>
+
+    <section class="principles wrap" aria-label="基本原则">
+      <div><span class="small-label">COMPLETE</span><h2>功能完整，入口清楚</h2><p>适用功能默认开放。每个入口都说明用途、维护方式和求助路径。</p></div>
+      <div><span class="small-label">BOUNDED</span><h2>磁盘优先，产物有界</h2><p>复用已有环境，控制峰值占用。每次尝试都要有明确的收尾。</p></div>
+      <div><span class="small-label">VERIFIABLE</span><h2>完成，以证据为准</h2><p>提交文件、通过检查、部署成功和实际可用，分别确认。</p></div>
+    </section>
+
+    <section class="standard wrap section" id="standard" aria-labelledby="standard-title">
+      <div class="section-heading"><div><p class="eyebrow">The standard</p><h2 id="standard-title">一套标准，覆盖整个维护过程。</h2></div><a class="text-link" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/docs/standard.md">查看完整规范 <span aria-hidden="true">↗</span></a></div>
+      <p class="section-description">把通用规则放在共同的地方，把项目事实留给项目。每一项都包含实际完成条件。</p>
+      <div class="filter-tools" hidden>
+        <div class="filters" role="group" aria-label="按标准类别筛选"><button type="button" class="filter active" data-filter="all" aria-pressed="true">全部</button><button type="button" class="filter" data-filter="experience" aria-pressed="false">使用体验</button><button type="button" class="filter" data-filter="maintenance" aria-pressed="false">维护与发布</button><button type="button" class="filter" data-filter="agent" aria-pressed="false">AI 与资源</button></div>
+        <label class="search"><svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></svg><span class="sr-only">搜索标准</span><input type="search" id="standard-search" placeholder="搜索标准…" autocomplete="off"></label>
+      </div>
+      <div class="standard-list" id="standard-list">
+        <article class="standard-row" data-category="experience"><div class="standard-kind">介绍与文档<span>README & DOCS</span></div><div class="standard-content"><h3>让第一次打开项目的人知道怎么开始。</h3><p>清楚说明用途、适用平台、安装方式、示例、限制与帮助入口。中文与英文入口保持一致，命令和链接经过验证。</p><div class="acceptance"><span>验收</span>新用户能按说明完成第一步，发现问题时知道去哪里。</div></div><a class="row-link" aria-label="阅读介绍与文档标准" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/docs/standard.md#project-identity-and-documentation">↗</a></article>
+        <article class="standard-row" data-category="experience"><div class="standard-kind">项目网站<span>PAGES & ACCESSIBILITY</span></div><div class="standard-content"><h3>页面好看，也要轻、快、可访问。</h3><p>让文档、下载和社区入口易于找到。兼顾移动端、键盘与明暗主题，使用必要的资源和清楚的导航。</p><div class="acceptance"><span>验收</span>部署地址、页面导航、主要链接与基本可访问性分别检查。</div></div><a class="row-link" aria-label="阅读项目网站标准" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/docs/standard.md#project-identity-and-documentation">↗</a></article>
+        <article class="standard-row" data-category="experience"><div class="standard-kind">社区与贡献<span>COMMUNITY</span></div><div class="standard-content"><h3>让问题、讨论和贡献各有去处。</h3><p>默认启用适用的 Issues、Discussions、Projects、Wiki 等功能。明确各入口职责，提供贡献步骤、行为准则和安全报告方式。</p><div class="acceptance"><span>验收</span>入口实际可用，模板可提交，规则适合个人维护者执行。</div></div><a class="row-link" aria-label="阅读社区与贡献标准" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/docs/standard.md#community-and-decisions">↗</a></article>
+        <article class="standard-row" data-category="maintenance"><div class="standard-kind">许可与来源<span>LICENSE & PROVENANCE</span></div><div class="standard-content"><h3>项目许可和第三方权利都要说清楚。</h3><p>根据项目内容核验许可证，保留上游版权与第三方声明。代码、文档和素材的来源分别处理，模板升级保留项目已有约定。</p><div class="acceptance"><span>验收</span>许可与实际内容相符，来源可追溯，升级不覆盖已有权利声明。</div></div><a class="row-link" aria-label="阅读许可与来源标准" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/docs/standard.md#licenses-origin-and-brand">↗</a></article>
+        <article class="standard-row" data-category="maintenance"><div class="standard-kind">发布与恢复<span>RELEASE & RECOVERY</span></div><div class="standard-content"><h3>交付可用的版本，也准备好恢复路径。</h3><p>验证版本、资产和下载入口；区分检查权限与发布权限。明确模板升级、网站部署和版本发布的回滚方式，以及项目归档后的入口安排。</p><div class="acceptance"><span>验收</span>发布结果有证据，恢复步骤可执行，备份范围和保留数量明确。</div></div><a class="row-link" aria-label="阅读发布与恢复标准" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/docs/standard.md#releases-safety-and-recovery">↗</a></article>
+        <article class="standard-row" data-category="agent"><div class="standard-kind">AI 工作与磁盘<span>AGENTS & RESOURCES</span></div><div class="standard-content"><h3>对本次任务创建的文件和进程负责。</h3><p>先复用，再创建。临时内容集中存放，下载、解压和构建考虑峰值占用。保护独有成果，处理废弃尝试，结束时清理无用途产物。</p><div class="acceptance"><span>验收</span>磁盘增长能够解释，保留内容有用途，已完成的任务不留下无用途进程。</div></div><a class="row-link" aria-label="阅读 AI 工作与磁盘标准" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/docs/standard.md#ai-work-and-disk-space">↗</a></article>
+      </div>
+      <p class="filter-result sr-only" role="status" aria-live="polite"></p>
+      <p class="empty-state" hidden>没有匹配的标准。试试“磁盘”“贡献”或切换到“全部”。</p>
+    </section>
+
+    <section class="resource-section" id="resources" aria-labelledby="resource-title"><div class="wrap resource-grid">
+      <div class="resource-copy"><p class="eyebrow">Space is a resource</p><h2 id="resource-title">把磁盘空间，<br>当作有限的资源。</h2><p>限制日积月累的占用，也考虑一次任务的峰值。CPU、内存与并发保持合理，让其他工作能继续进行。</p><a class="resource-link" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/AGENTS.md">阅读 agent 工作规则 <span aria-hidden="true">↗</span></a></div>
+      <div class="resource-flow"><div class="flow-step"><span class="flow-number" aria-hidden="true">1</span><div><h3>开始前，复用和估算</h3><p>检查已有副本与可用空间。把下载包、解压目录、依赖和构建输出可能同时存在的空间算进去。</p></div></div><div class="flow-step"><span class="flow-number" aria-hidden="true">2</span><div><h3>进行中，集中和设限</h3><p>临时脚本、日志、截图放进 <code>work/</code>，交付物放进 <code>outputs/</code>。控制缓存、备份和输出，放弃的尝试及时处理。</p></div></div><div class="flow-step"><span class="flow-number" aria-hidden="true">3</span><div><h3>结束时，保护成果再收尾</h3><p>核实归属、路径和独有内容，归档不用的工作副本，停止本任务无用途的进程。保留项说明用途与清理条件。</p></div></div><p class="resource-footnote">空间不足时，先缩小任务或清理本次冗余。放入回收站仍占用磁盘，释放空间需要单独核实。</p></div>
+    </div></section>
+
+    <section class="adoption wrap section" id="adoption" aria-labelledby="adoption-title"><div class="section-heading"><div><p class="eyebrow">Make it yours</p><h2 id="adoption-title">采用时，沿着清楚的边界。</h2></div><a class="text-link" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/docs/adoption.md">采用与验收指南 <span aria-hidden="true">↗</span></a></div>
+      <div class="adoption-columns"><div><span class="small-label">账号层</span><h3>提供社区默认值</h3><p>在公共 <code>.github</code> 仓库维护 GitHub 支持的默认社区文件。项目已有文件和模板时，检查具体覆盖行为。</p></div><div><span class="small-label">项目层</span><h3>采用并保留项目事实</h3><p>README、许可证、工作流与平台设置逐项核验。模板升级通过可审查的变更进行，保留定制和来源声明。</p></div><div><span class="small-label">客户端层</span><h3>加载规则，执行收尾</h3><p>把 agent 规则接入各客户端实际读取的入口。仓库里的文件需要显式加载，资源限制需要实际执行。</p></div></div>
+      <div class="adoption-note"><span aria-hidden="true">↳</span><p>期望配置与验证结果分别记录。未配置、不适用、平台不支持和已验证是不同状态；样板文件的存在不等于平台配置完成。</p></div>
+    </section>
+
+    <section class="closing wrap"><div><p class="eyebrow">A shared starting point</p><h2>从一个项目开始，<br>把约定做成可用的日常。</h2></div><div class="closing-actions"><a class="button button-primary" href="https://github.com/tangyixiao/.github">打开样板仓库 <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/CONTRIBUTING.md">参与完善规范 <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="footer wrap"><div class="footer-brand"><strong>TOSS</strong><span>Tangyixiao Open Source Standard</span></div><p>提案版本 · 2026-11-08<br>规范合并后生效；本文档链接指向评审分支。</p><div class="footer-links"><a href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/README.zh-CN.md">中文说明</a><a href="https://github.com/tangyixiao/.github/blob/codex/toss-sample-20261108/AI_POLICY.md">AI 贡献政策</a><a href="#main">回到顶部 ↑</a></div></footer>
+</body>
+</html>
