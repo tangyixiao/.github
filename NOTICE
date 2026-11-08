@@ -28,6 +28,6 @@ Source pages and assets were checked on 2026-11-08:
   Official logo: https://fecdn.luogu.com.cn/columba/static.08b304e3faa27052.logo-full.png
   Local file: site/assets/brands/luogu.png
 
-The two site/assets/demo/*.svg files are original illustrative interface
+The localized light/dark site/assets/demo/*.svg files are original illustrative interface
 diagrams. They are labeled demonstrations and are not application screenshots
 or evidence of actual submissions, scores, or learning progress.

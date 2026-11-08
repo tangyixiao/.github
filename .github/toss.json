@@ -23,7 +23,7 @@
     "max_heavy_jobs_per_machine": 1,
     "max_log_mib": 20,
     "repository_source_budget_kib": 512,
-    "site_source_budget_kib": 150,
+    "site_source_budget_kib": 256,
     "max_source_file_kib": 256
   },
   "enforcement": {

@@ -70,8 +70,9 @@ point and verify the instruction sources it actually loaded.
 - For website changes preserve the user-approved project-homepage concept. The
   public page presents the example project's purpose, experience and ways to start;
   do not replace it with a template advertisement, file list or maintenance rules.
-- Keep project-specific content in `project.json`; run `python scripts/render_site.py`
-  after editing it. Run `python scripts/check.py`, then compare desktop and mobile
+- Keep shared identity, URLs, releases and locale registration in `project.json`;
+  translated content belongs in `locales/<code>.json`. Run `python scripts/render_site.py`
+  after editing either. Run `python scripts/check.py`, then compare desktop and mobile
   browser screenshots against the approved concept. Check keyboard use, navigation,
   applicable theme behavior and console errors. Install no frontend stack.
 

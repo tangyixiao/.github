@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "description": "{project} 是连接 Codeforces、AtCoder 与洛谷的竞赛编程客户端。整理题目与提交记录，安排训练，回顾自己的进展。"
+  },
+  "pages": {
+    "home": { "title": "{project} · 竞赛编程，一个入口" },
+    "features": {
+      "title": "功能 · {project}",
+      "description": "浏览题目、整理提交记录，按主题安排训练，再回顾做过的题目。"
+    },
+    "download": {
+      "title": "下载与使用 · {project}",
+      "description": "下载 Android 版，连接常用 OJ，开始整理自己的练习。"
+    },
+    "community": {
+      "title": "社区 · {project}",
+      "description": "反馈问题、提出建议，或通过代码与文档参与项目。"
+    }
+  },
+  "nav": { "home": "首页", "features": "功能", "download": "下载与使用", "community": "社区" },
+  "ui": {
+    "skip_link": "跳转到主要内容",
+    "navigation": "主导航",
+    "open_navigation": "打开导航",
+    "close_navigation": "关闭导航",
+    "language": "选择语言",
+    "theme": "选择主题",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "跟随系统",
+    "platforms": "支持的平台",
+    "github": "GitHub",
+    "view_image": "查看完整演示图",
+    "feature_more": "查看完整功能",
+    "download": "下载 APK",
+    "release_notes": "查看发布说明",
+    "documentation": "使用文档",
+    "source": "查看源代码",
+    "illustration": "演示示意"
+  },
+  "hero": {
+    "title": [ "刷题、比赛、复习，", "一个入口" ],
+    "description": [ "把常用 OJ 放在一起，专注每一次练习。", "整理题目与提交记录，安排训练，回顾自己的进展。" ],
+    "primary_action": "下载 Android 版",
+    "secondary_action": "了解功能"
+  },
+  "preview": {
+    "caption": "界面布局示意 · 非应用实测截图",
+    "tabs": [
+      { "label": "题库", "icon": "home" },
+      { "label": "比赛", "icon": "trophy" },
+      { "label": "训练", "icon": "layers" },
+      { "label": "复习", "icon": "book" }
+    ],
+    "items": [
+      { "title": "题目练习", "description": "按平台与标签浏览题目", "icon": "code" },
+      { "title": "参加比赛", "description": "查看近期比赛", "icon": "trophy" },
+      { "title": "训练计划", "description": "按主题进行练习", "icon": "layers" }
+    ]
+  },
+  "features": {
+    "title": "从练习，到回顾",
+    "groups": [
+      {
+        "title": "题目与提交",
+        "description": "按平台浏览与搜索题目，统一整理自己的提交记录。",
+        "detail": "通过题目标签找到练习方向，再回到记录里查看自己的尝试。",
+        "icon": "code",
+        "image": {
+          "src": "assets/demo/problem-workflow.svg",
+          "dark_src": "assets/demo/problem-workflow-dark.svg",
+          "alt": "题目浏览演示：按平台搜索、查看标签与提交记录示例",
+          "caption": "题目浏览与提交记录 · 演示示意"
+        }
+      },
+      {
+        "title": "训练与复习",
+        "description": "按主题安排训练，集中练习相关题目；通过复习回顾做过的题目与自己的掌握情况。",
+        "detail": "把新练习和回顾放进同一份安排，给做过的题目留一点时间。",
+        "icon": "layers",
+        "image": {
+          "src": "assets/demo/training-review.svg",
+          "dark_src": "assets/demo/training-review-dark.svg",
+          "alt": "训练复习演示：一周训练安排、主题练习和待回顾题目",
+          "caption": "训练安排与复习队列 · 演示示意"
+        }
+      }
+    ]
+  },
+  "getting_started": {
+    "title": "开始使用 {project}",
+    "steps": [
+      { "title": "安装 Android 版", "description": "下载 APK，并在 Android 设备上完成安装。", "icon": "download" },
+      { "title": "连接常用 OJ", "description": "按文档添加账号，开始整理练习记录。", "icon": "link" }
+    ]
+  },
+  "community": {
+    "title": "一起改进 {project}",
+    "description": "欢迎反馈问题、提出建议，或尝试贡献代码与项目改进。",
+    "links": [
+      { "label": "报告问题", "description": "提供遇到问题的步骤，帮助我们复现与改进。", "icon": "code" },
+      { "label": "功能建议", "description": "分享你的需求与想法，讨论可能的功能方向。", "icon": "trophy" },
+      { "label": "参与贡献", "description": "通过代码、文档或问题整理，一起完善项目。", "icon": "link" }
+    ]
+  },
+  "footer": { "copyright": "{project}" }
+}

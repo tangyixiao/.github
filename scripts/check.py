@@ -22,7 +22,8 @@ REQUIRED = {
     ".github/ISSUE_TEMPLATE/config.yml",
     ".github/DISCUSSION_TEMPLATE/ideas.yml", ".github/DISCUSSION_TEMPLATE/q-a.yml",
     ".github/workflows/check.yml", ".github/workflows/pages.yml",
-    "site/index.html", "site/favicon.svg", "scripts/check.py",
+    "site/index.html", "site/features.html", "site/download.html", "site/community.html",
+    "site/favicon.svg", "site/style.css", "site/script.js", "site/theme-init.js", "scripts/check.py",
     "project.json", "templates/project-homepage.html", "scripts/render_site.py",
     "tests/test_render_site.py",
 }
@@ -44,6 +45,12 @@ class Page(HTMLParser):
         for attr in ("href", "src", "poster"):
             if attrs.get(attr):
                 self.links.append(attrs[attr])
+        # Check both screenshot variants, including the one not selected by this host.
+        if attrs.get("srcset"):
+            for candidate in attrs["srcset"].split(","):
+                parts = candidate.strip().split()
+                if parts:
+                    self.links.append(parts[0])
 
 
 def fail(path, message):
@@ -231,9 +238,9 @@ def main():
     if not (ROOT / "LICENSE").read_text(encoding="utf-8-sig").lstrip().startswith("Apache License"):
         errors.append("Expected the complete Apache-2.0 license text")
     if (ROOT / "scripts/render_site.py").is_file():
-        check_command(["scripts/render_site.py", "--check"], "Rendered homepage")
+        check_command(["scripts/render_site.py", "--check"], "Rendered localized pages")
     if (ROOT / "tests/test_render_site.py").is_file():
-        check_command(["-m", "unittest", "discover", "-s", "tests"], "Homepage template tests")
+        check_command(["-m", "unittest", "discover", "-s", "tests"], "Website template tests")
     return finish(files, total, site_total)
 
 

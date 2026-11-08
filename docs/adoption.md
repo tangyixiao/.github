@@ -10,18 +10,45 @@ into an existing project. The public page should describe the receiving project 
 The default OJ NEXUS content demonstrates the layout; it is not the identity of
 every project that adopts the template.
 
-For a website-only adoption, copy `project.json`, `templates/project-homepage.html`,
+For a website-only adoption, copy `project.json`, `locales/`, `templates/project-homepage.html`,
 `scripts/render_site.py`, and `site/`. No application source, dependency tree or
 package installation is required. Keep the source template and configuration so
 the next content update can be rendered consistently.
 
-Edit `project.json` with actual identity, descriptions, features, links and release
-information. Replace the illustrative interface with a real screenshot if available,
-with accurate alternative text and caption. The sample's OJ NEXUS release links are
+Schema 2 separates shared data from translations. Edit `project.json` with actual
+identity, URLs, release information, default theme and locale registration. Edit
+`license_label` and `links.license` together to describe the receiving project's
+actual license; this does not replace that project's license text. Edit
+`locales/<code>.json` for page titles, descriptions, features, navigation, captions
+and accessible control labels. `{project}` and `{release}` in text insert the shared
+name and release; asset paths and icon names are never expanded. The sample's OJ NEXUS release links are
 real, but belong to OJ NEXUS; update them before publishing another project.
 
-The approved default appearance is light. Set `theme` to `system` in `project.json`
-to follow the visitor's dark/light system preference, then render again.
+Four pages are generated for each registered locale: `index.html`, `features.html`,
+`download.html` and `community.html`. The default Chinese locale uses the site root;
+English uses `en/`. Navigation and language links use relative paths, including when
+hosted under a GitHub Pages repository path. Changing language keeps the same page.
+
+To add a language, create a complete `locales/<code>.json` with the same keys and
+array lengths as the default dictionary, translate its text and image descriptions,
+and add `{code, label, directory}` to `locales` in `project.json`. Use a unique language
+tag and safe single directory name; the default locale alone uses `directory: ""`.
+Only registered languages with valid dictionaries appear. The renderer rejects
+missing keys and shape differences instead of publishing partly translated pages.
+Localized illustrations may share files or point to accurately translated variants.
+
+The default appearance is light. Visitors can choose light, dark or system from
+every page. `theme` in `project.json` controls the fallback before a saved preference.
+The small synchronous `theme-init.js` applies a saved choice before the stylesheet
+paints; one site-root-scoped preference is shared by all pages and languages. System
+mode reacts to system changes. Storage denial leaves the current-page controls usable;
+cross-file `file://` persistence depends on the browser. No-JavaScript navigation,
+language switching and reading remain available, with the configured theme fallback.
+
+To use a captured product image, set `preview.image: {src}` in `project.json` and
+`preview.image: {alt, caption}` in each dictionary. Replace the native illustrative
+tabs/items in that dictionary with these image descriptions if no longer needed.
+Place the capture beneath `site/` and identify it accurately.
 
 The optional `platforms` array supplies service names, links and local `logo`
 paths. Use `wordmark: true` for artwork that already contains the full name;
@@ -31,17 +58,21 @@ their original colors and proportions; their sources and rights are in `NOTICE`.
 Check the receiving project's intended use against the owner's requirements,
 including AtCoder's media/service notification requirement, before publication.
 
-Each feature group can use `image: {src, alt, caption}` instead of its small
+Each translated feature group can use `image: {src, dark_src, alt, caption}` instead of its small
 `preview` rows. Image paths must be local to `site/`; place a real capture or
 original illustration in `site/assets/`. The sample's warm and green SVG panels
 are labeled demonstrations, not application screenshots. Replace or remove the
 OJ-specific marks and illustrations when adopting this for another product.
-Keep captions accurate. Feature images open at full size when selected.
+Keep captions accurate. `dark_src` is optional; when provided, both the displayed
+image and full-size link follow the selected theme. Official marks are never inverted.
 
 The source-size limits in `.github/toss.json` are budgets for this small starter.
 Review them when adding a real screenshot or application source; choose an explicit
 reasonable budget for that project rather than silently disabling the checks.
 Keep large release assets in the project's release/distribution channel.
+This starter's site budget is 256 KiB for eight HTML pages, shared scripts/styles,
+three platform PNGs and eight small localized light/dark SVGs. The complete source
+budget remains 512 KiB. Neither budget includes release binaries or dependencies.
 
 ```sh
 python scripts/render_site.py
@@ -52,10 +83,20 @@ python -m http.server 8765 --directory site --bind 127.0.0.1
 
 Review the desktop and mobile page. The generated HTML contains the content,
 works without JavaScript and does not depend on fetching its configuration at
-runtime. Commit both the configuration/template changes and rendered `site/index.html`.
-The read-only render check fails when the generated file is stale. The repository
+runtime. Commit configuration, dictionaries, templates and every rendered HTML page.
+The read-only render check fails if any expected page is missing or stale. Use
+`--output-dir <directory>` for a different output folder. Rendering does not delete
+unrelated files or retired locale directories. Its marker identifies retired
+generated HTML, which `--check` reports as needing review instead of silently
+publishing a removed language. Remove a retired generated directory
+only after reviewing its ownership and any manual content. The repository
 checker and renderer tests apply to the complete starter; a website-only copy can
 still run the renderer's `--check` command independently.
+
+Earlier single-page PR snapshots used schema 1. Move their shared values into the
+schema 2 structure and their visible text into locale dictionaries before rendering;
+the renderer reports the unsupported schema rather than silently discarding content.
+The old single-file `--output` option is replaced by `--output-dir`.
 
 When copying community files, adapt contacts, source attribution and contribution
 instructions to the receiving project. Never replace an existing application's

@@ -1,6 +1,6 @@
 # Project website and community template
 
-A reusable public project homepage, community defaults, and practical maintenance
+A reusable multilingual project website, community defaults, and practical maintenance
 rules. The website introduces a project's purpose, shows its experience, and helps
 visitors start using it or participate.
 
@@ -8,14 +8,16 @@ visitors start using it or participate.
 
 ## Make it your project's website
 
-The included homepage uses **OJ NEXUS** as example content. Its project identity,
-copy, features, images, download, documentation and community links come from
-[`project.json`](project.json). The example does not include the OJ NEXUS application
+The website uses **OJ NEXUS** as example content across Home, Features, Get started
+and Community pages. Shared identity, releases, URLs and locale registration come
+from [`project.json`](project.json); complete Chinese and English content comes from
+`locales/`. Visitors can choose light, dark or system appearance. The example does not include the OJ NEXUS application
 source or an installer. Its drawn interface is explicitly labelled as an illustration.
 
 1. After the sample is merged and template mode is enabled, create a repository
    from it; during review, use the PR branch or copy its website files into an existing project.
-2. Edit `project.json` with your project's actual content and URLs. Replace the
+2. Edit `project.json` with your project's identity and URLs, and `locales/*.json`
+   with its translated content. Replace the
    illustration with a real screenshot when available; provide meaningful alternative text.
 3. Render and check the site:
 
@@ -27,7 +29,10 @@ source or an installer. Its drawn interface is explicitly labelled as an illustr
 
 Open `http://127.0.0.1:8765`, then stop the server when finished. Generated HTML is
 committed, readable without JavaScript, and can also be opened directly. Editing
-the configuration and rerendering is the normal content-update path.
+the configuration or translations and rerendering is the normal content-update path.
+Language switching keeps the corresponding page; theme preferences persist across
+pages and languages when browser storage is available. Add a complete locale
+dictionary and register its directory to extend the site without copying its styles.
 
 The renderer and checks use Python's standard library. There is no package install,
 frontend build, remote font or analytics service. Read the [adoption guide](docs/adoption.md)
@@ -37,7 +42,7 @@ for copying only the website, adjusting community contacts, and configuring publ
 
 | Part | Purpose |
 | --- | --- |
-| Project homepage | Responsive project introduction, product visual, features, getting started and community links |
+| Project website | Four pages in Chinese and English, extensible locale dictionaries, three appearance modes and responsive product illustrations |
 | Community files | Contribution, conduct, support, security and accessibility guidance; issue/discussion forms and PR template |
 | Maintenance standard | Licensing and origin, releases, recovery, upgrades and evidence of completion |
 | AI working agreements | Contributor responsibility, workspace reuse, disk budgets and task cleanup |

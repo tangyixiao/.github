@@ -1,181 +1,27 @@
 {
-  "schema_version": 1,
-  "language": "zh-CN",
-  "theme": "light",
-  "meta": {
-    "title": "OJ NEXUS · 竞赛编程，一个入口",
-    "description": "OJ NEXUS 是连接 Codeforces、AtCoder 与洛谷的竞赛编程客户端。整理题目与提交记录，安排训练，回顾自己的进展。"
-  },
+  "schema_version": 2,
   "name": "OJ NEXUS",
-  "navigation": [
-    {
-      "label": "功能",
-      "href": "#features"
-    },
-    {
-      "label": "下载",
-      "href": "#start"
-    },
-    {
-      "label": "文档",
-      "href": "https://github.com/tangyixiao/OJ-NEXUS#readme"
-    },
-    {
-      "label": "社区",
-      "href": "#community"
-    }
+  "theme": "light",
+  "default_locale": "zh-CN",
+  "locales": [
+    { "code": "zh-CN", "label": "简体中文", "directory": "" },
+    { "code": "en", "label": "English", "directory": "en" }
   ],
-  "repository": {
-    "label": "GitHub",
-    "href": "https://github.com/tangyixiao/OJ-NEXUS"
-  },
-  "hero": {
-    "title": [
-      "刷题、比赛、复习，",
-      "一个入口"
-    ],
-    "description": [
-      "把常用 OJ 放在一起，专注每一次练习。",
-      "整理题目与提交记录，安排训练，回顾自己的进展。"
-    ],
-    "primary_action": {
-      "label": "下载 Android 版",
-      "href": "https://github.com/tangyixiao/OJ-NEXUS/releases/download/v1.0.4/OJ-NEXUS-v1.0.4.apk"
-    },
-    "secondary_action": {
-      "label": "使用文档",
-      "href": "https://github.com/tangyixiao/OJ-NEXUS#readme"
-    },
-    "release_note": "Android v1.0.4"
-  },
-  "preview": {
-    "caption": "界面布局示意 · 非应用实测截图",
-    "image": null,
-    "tabs": [
-      {
-        "label": "题库",
-        "icon": "home"
-      },
-      {
-        "label": "比赛",
-        "icon": "trophy"
-      },
-      {
-        "label": "训练",
-        "icon": "layers"
-      },
-      {
-        "label": "复习",
-        "icon": "book"
-      }
-    ],
-    "items": [
-      {
-        "title": "题目练习",
-        "description": "按平台与标签浏览题目",
-        "icon": "code"
-      },
-      {
-        "title": "参加比赛",
-        "description": "查看近期比赛",
-        "icon": "trophy"
-      },
-      {
-        "title": "训练计划",
-        "description": "按主题进行练习",
-        "icon": "layers"
-      }
-    ]
-  },
-  "features": {
-    "title": "从练习，到回顾",
-    "groups": [
-      {
-        "title": "题目与提交",
-        "description": "按平台浏览与搜索题目，统一整理自己的提交记录。",
-        "detail": "",
-        "icon": "code",
-        "image": {
-          "src": "assets/demo/problem-workflow.svg",
-          "alt": "题目浏览演示：按平台搜索、查看标签与提交记录示例",
-          "caption": "题目浏览与提交记录 · 演示示意"
-        }
-      },
-      {
-        "title": "训练与复习",
-        "description": "按主题安排训练，集中练习相关题目；通过复习回顾做过的题目与自己的掌握情况。",
-        "detail": "",
-        "icon": "layers",
-        "image": {
-          "src": "assets/demo/training-review.svg",
-          "alt": "训练复习演示：一周训练安排、主题练习和待回顾题目",
-          "caption": "训练安排与复习队列 · 演示示意"
-        }
-      }
-    ]
-  },
-  "getting_started": {
-    "title": "开始使用",
-    "steps": [
-      {
-        "title": "安装 Android 版",
-        "description": "从 GitHub Releases 获取安装包。",
-        "href": "https://github.com/tangyixiao/OJ-NEXUS/releases/download/v1.0.4/OJ-NEXUS-v1.0.4.apk",
-        "icon": "download"
-      },
-      {
-        "title": "连接常用 OJ",
-        "description": "按文档添加账号，开始整理练习记录。",
-        "href": "https://github.com/tangyixiao/OJ-NEXUS#readme",
-        "icon": "link"
-      }
-    ]
-  },
-  "community": {
-    "title": "参与项目",
-    "description": "遇到问题，或者有想法，欢迎一起改进。",
-    "links": [
-      {
-        "label": "报告问题",
-        "href": "https://github.com/tangyixiao/OJ-NEXUS/issues/new"
-      },
-      {
-        "label": "功能建议",
-        "href": "https://github.com/tangyixiao/OJ-NEXUS/issues"
-      },
-      {
-        "label": "参与贡献",
-        "href": "https://github.com/tangyixiao/OJ-NEXUS/contribute"
-      },
-      {
-        "label": "GitHub ↗",
-        "href": "https://github.com/tangyixiao/OJ-NEXUS"
-      }
-    ]
-  },
-  "footer": {
-    "copyright": "OJ NEXUS",
-    "license": {
-      "label": "Apache-2.0",
-      "href": "https://github.com/tangyixiao/OJ-NEXUS/blob/main/LICENSE"
-    }
+  "release": "Android v1.0.4",
+  "license_label": "Apache-2.0",
+  "links": {
+    "repository": "https://github.com/tangyixiao/OJ-NEXUS",
+    "download": "https://github.com/tangyixiao/OJ-NEXUS/releases/download/v1.0.4/OJ-NEXUS-v1.0.4.apk",
+    "release": "https://github.com/tangyixiao/OJ-NEXUS/releases/tag/v1.0.4",
+    "documentation": "https://github.com/tangyixiao/OJ-NEXUS#readme",
+    "report_issue": "https://github.com/tangyixiao/OJ-NEXUS/issues/new",
+    "suggest_feature": "https://github.com/tangyixiao/OJ-NEXUS/issues",
+    "contribute": "https://github.com/tangyixiao/OJ-NEXUS/contribute",
+    "license": "https://github.com/tangyixiao/OJ-NEXUS/blob/main/LICENSE"
   },
   "platforms": [
-    {
-      "name": "Codeforces",
-      "href": "https://codeforces.com/",
-      "logo": "assets/brands/codeforces.png"
-    },
-    {
-      "name": "AtCoder",
-      "href": "https://atcoder.jp/",
-      "logo": "assets/brands/atcoder.png"
-    },
-    {
-      "name": "洛谷",
-      "href": "https://www.luogu.com.cn/",
-      "logo": "assets/brands/luogu.png",
-      "wordmark": true
-    }
+    { "name": "Codeforces", "href": "https://codeforces.com/", "logo": "assets/brands/codeforces.png", "wordmark": false },
+    { "name": "AtCoder", "href": "https://atcoder.jp/", "logo": "assets/brands/atcoder.png", "wordmark": false },
+    { "name": "洛谷", "href": "https://www.luogu.com.cn/", "logo": "assets/brands/luogu.png", "wordmark": true }
   ]
 }
