@@ -1,6 +1,47 @@
-# Adopt and maintain the defaults
+# Use the website and community template
 
 [Standard](standard.md) · [Agent rules](../AGENTS.md) · [Policy](../.github/toss.json)
+
+## Create a project website
+
+After this sample is merged and template mode is enabled, start from the repository's
+**Use this template** entry. During review, use the PR branch or copy its website
+into an existing project. The public page should describe the receiving project itself.
+The default OJ NEXUS content demonstrates the layout; it is not the identity of
+every project that adopts the template.
+
+For a website-only adoption, copy `project.json`, `templates/project-homepage.html`,
+`scripts/render_site.py`, and `site/`. No application source, dependency tree or
+package installation is required. Keep the source template and configuration so
+the next content update can be rendered consistently.
+
+Edit `project.json` with actual identity, descriptions, features, links and release
+information. Replace the illustrative interface with a real screenshot if available,
+with accurate alternative text and caption. The sample's OJ NEXUS release links are
+real, but belong to OJ NEXUS; update them before publishing another project.
+
+The source-size limits in `.github/toss.json` are budgets for this small starter.
+Review them when adding a real screenshot or application source; choose an explicit
+reasonable budget for that project rather than silently disabling the checks.
+Keep large release assets in the project's release/distribution channel.
+
+```sh
+python scripts/render_site.py
+python scripts/render_site.py --check
+python scripts/check.py
+python -m http.server 8765 --directory site --bind 127.0.0.1
+```
+
+Review the desktop and mobile page. The generated HTML contains the content,
+works without JavaScript and does not depend on fetching its configuration at
+runtime. Commit both the configuration/template changes and rendered `site/index.html`.
+The read-only render check fails when the generated file is stale. The repository
+checker and renderer tests apply to the complete starter; a website-only copy can
+still run the renderer's `--check` command independently.
+
+When copying community files, adapt contacts, source attribution and contribution
+instructions to the receiving project. Never replace an existing application's
+license merely because this starter is Apache-2.0.
 
 ## Activate the sample
 
@@ -25,6 +66,7 @@ repeat run should repair differences without duplicating content.
 | Capability | Verification |
 | --- | --- |
 | Issues / Wiki / Discussions | Read repository settings, then open the relevant entry point |
+| Template repository | Confirm the Use this template entry; creating a copy does not keep it synchronized |
 | Discussion forms | Confirm categories have matching `ideas` and `q-a` slugs and open their forms |
 | Projects | Verify the feature and an actual board separately; link populated work when it exists |
 | Private vulnerability reporting | Verify enablement and the private report entry, without submitting a test vulnerability |
@@ -41,9 +83,8 @@ No test submission to Issues/Discussions is needed to prove a form can open.
 
 At initial inspection on 2026-11-08, Pages used the `project-pages` branch at `/`.
 That branch is outside this PR. The new `site/` is a proposed source. Preview it
-locally before changing the publishing source. Site document links intentionally
-target the sample review branch; switch them to the accepted revision/default
-branch when preparing a production deployment.
+locally before changing the publishing source. Configure all public project links
+for the receiving project before publishing it.
 
 The included `pages.yml` is manual and restricted to `main`. After this PR is
 merged and replacing the current site is authorized, select GitHub Actions as
@@ -83,11 +124,13 @@ into an unrequested installation of scheduled cleaners, watchers, or startup job
 python scripts/check.py
 ```
 
-The checker reads source only, installs nothing, calls no network service, and
-deletes nothing. `.yml` forms are written in JSON syntax, which is valid YAML;
+The checker reads source and runs bounded renderer tests without installing
+dependencies or calling network services. It does not modify or delete project
+sources; tests create and clean their own bounded scratch under `work/`.
+`.yml` forms use JSON syntax, which is valid YAML;
 this makes local structural validation possible with Python's standard library.
-It checks local links and fragment targets, form structure, the policy budgets,
-source size, static site asset links, and fixed Action commit references.
+It checks rendering consistency, local links and fragment targets, form structure,
+policy budgets, source size, static site asset links and fixed Action commit references.
 
 It does **not** certify external link availability, browser behavior, legal
 compatibility, current GitHub settings, downstream inheritance, or a deployed site.

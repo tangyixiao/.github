@@ -18,6 +18,14 @@ one working example, and help/contribution links. Move development history and
 architecture detail into navigable documents. Keep English and Chinese entry pages
 consistent; do not promise that every document is translated when it is not.
 
+The reusable website is a project homepage, with replaceable identity, copy,
+product visuals, feature descriptions and working links in `project.json`.
+Visitors should understand the receiving project and how to start using it.
+Maintenance policies, repository file inventories and template-authoring details
+belong in the relevant documentation rather than the homepage's primary content.
+Use an explicitly approved visual overview before a new website or substantial
+redesign, then compare the implementation at desktop and mobile sizes against it.
+
 Pages carries the complete user path: start, configure, use, troubleshoot, update,
 and contribute. Make links work under the repository subpath. Support keyboard
 navigation, readable contrast, mobile layouts, dark mode, and reduced motion.

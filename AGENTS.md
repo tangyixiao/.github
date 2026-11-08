@@ -67,14 +67,21 @@ point and verify the instruction sources it actually loaded.
   file for a routine clean finish.
 - Keep local validation, CI, merge, deployment, platform configuration, and actual
   use distinct. Never report success from a planned action or a file's presence.
-- Run `python scripts/check.py`. For site changes verify keyboard use, mobile layout,
-  dark mode, search/filter behavior, and the browser console. Install no frontend stack.
+- For website changes preserve the user-approved project-homepage concept. The
+  public page presents the example project's purpose, experience and ways to start;
+  do not replace it with a template advertisement, file list or maintenance rules.
+- Keep project-specific content in `project.json`; run `python scripts/render_site.py`
+  after editing it. Run `python scripts/check.py`, then compare desktop and mobile
+  browser screenshots against the approved concept. Check keyboard use, navigation,
+  applicable theme behavior and console errors. Install no frontend stack.
 
 ## Scope and review
 
 - English public metadata and concise commits; English/Chinese contributions welcome.
-- Follow `docs/standard.md` and `docs/adoption.md`. Source links in the sample website
-  intentionally point to its review branch until the sample is accepted.
-- This repository owns community defaults. Do not mass-update consumer repositories,
+- Follow `docs/standard.md` and `docs/adoption.md`. The default website demonstrates
+  OJ NEXUS using public project information; its configured project links intentionally
+  go to that project. Its interface illustration is not a captured app screenshot.
+- This repository owns community defaults and the reusable website template.
+  Do not mass-update consumer repositories,
   switch the existing Pages source, merge, publish a release, change access controls,
   or replace another project's license without authorization for that action.

@@ -1,40 +1,55 @@
-<p align="center"><strong>TANGYIXIAO · OPEN SOURCE</strong></p>
+# Project website and community template
 
-# A clear path from first visit to first contribution.
+A reusable public project homepage, community defaults, and practical maintenance
+rules. The website introduces a project's purpose, shows its experience, and helps
+visitors start using it or participate.
 
-Shared community defaults and the **Tangyixiao Open Source Standard (TOSS)**: useful documentation, open participation, verifiable releases, and AI work that leaves the workspace in good order.
+[简体中文](README.zh-CN.md) · [Use the template](docs/adoption.md) · [Project standard](docs/standard.md) · [Contribute](CONTRIBUTING.md)
 
-[简体中文](README.zh-CN.md) · [Read the standard](docs/standard.md) · [Adopt it](docs/adoption.md) · [Contribute](CONTRIBUTING.md)
+## Make it your project's website
 
-**This is the first reviewable sample.** Files on a pull request branch do not activate account defaults. GitHub uses supported defaults from this repository's default branch after merge. The existing Pages site is published separately from `project-pages`; this proposal includes a replacement under `site/` for review.
+The included homepage uses **OJ NEXUS** as example content. Its project identity,
+copy, features, images, download, documentation and community links come from
+[`project.json`](project.json). The example does not include the OJ NEXUS application
+source or an installer. Its drawn interface is explicitly labelled as an illustration.
 
-## Start here
+1. After the sample is merged and template mode is enabled, create a repository
+   from it; during review, use the PR branch or copy its website files into an existing project.
+2. Edit `project.json` with your project's actual content and URLs. Replace the
+   illustration with a real screenshot when available; provide meaningful alternative text.
+3. Render and check the site:
 
-| You want to… | Go to… |
+   ```sh
+   python scripts/render_site.py
+   python scripts/check.py
+   python -m http.server 8765 --directory site --bind 127.0.0.1
+   ```
+
+Open `http://127.0.0.1:8765`, then stop the server when finished. Generated HTML is
+committed, readable without JavaScript, and can also be opened directly. Editing
+the configuration and rerendering is the normal content-update path.
+
+The renderer and checks use Python's standard library. There is no package install,
+frontend build, remote font or analytics service. Read the [adoption guide](docs/adoption.md)
+for copying only the website, adjusting community contacts, and configuring publishing.
+
+## Included
+
+| Part | Purpose |
 | --- | --- |
-| Report a project's bug or request a feature | That project's Issues; these defaults supply the form when it has no local override |
-| Ask how to use a project | That project's Discussions or support instructions |
-| Improve these shared defaults | [Open an issue](https://github.com/tangyixiao/.github/issues/new/choose) or read [Contributing](CONTRIBUTING.md) |
-| Report a vulnerability privately | The affected project's security policy, then [our fallback](SECURITY.md) |
-| Set up a project | [Adoption guide](docs/adoption.md) and [machine-readable policy](.github/toss.json) |
+| Project homepage | Responsive project introduction, product visual, features, getting started and community links |
+| Community files | Contribution, conduct, support, security and accessibility guidance; issue/discussion forms and PR template |
+| Maintenance standard | Licensing and origin, releases, recovery, upgrades and evidence of completion |
+| AI working agreements | Contributor responsibility, workspace reuse, disk budgets and task cleanup |
+| Offline checks | Configuration/render consistency, renderer tests, local links, forms, Action pins and source-size budgets |
 
-English and Chinese contributions are welcome. A small project can have complete community entry points; the depth of maintenance should match the project.
+English and Chinese contributions are welcome. Use the affected project's own
+issue tracker for its bugs and feature requests. This repository's tracker covers
+the shared template and defaults; private reports follow [SECURITY.md](SECURITY.md).
 
-## What this sample provides
-
-- **Community:** contribution, conduct, support, security, accessibility, issue forms, a PR template, and discussion forms.
-- **Project operations:** a standard covering identity, README and Pages, licensing and provenance, contribution, releases, recovery, and maintenance.
-- **AI work:** contributor accountability plus concrete [agent instructions](AGENTS.md) for workspace reuse, bounded resource use, and safe cleanup.
-- **Disk first:** check peak space before downloads or builds, reuse workspaces, bound logs and caches, and account for abandoned attempts.
-- **A small website:** responsive, accessible static files with no build toolchain, third-party fonts, or tracking.
-- **Lightweight checks:** Python's standard library validates local links, forms, policy consistency, action pins, and source-size budgets. No package installation is required.
-
-```sh
-python scripts/check.py
-python -m http.server 8765 --directory site --bind 127.0.0.1
-```
-
-Open `http://127.0.0.1:8765`. Stop the server when finished. Reading or editing the documents needs no server.
+**Review status:** supported account defaults activate only after merge to the
+default branch. The current Pages site still comes from `project-pages`; this PR
+proposes `site/` as its replacement without changing that existing publishing source.
 
 ## Know the boundary
 
@@ -55,6 +70,8 @@ The PR template asks for the evidence relevant to the change and the fate of tem
 
 ## Scope and license
 
-This repository is the account's community hub, not an application starter template. It does not rewrite existing project policies or licenses. The [standard](docs/standard.md) defines how a separate project template can adopt these agreements.
+This repository provides account defaults and a reusable website/community starter.
+It does not rewrite existing projects or supply their application code. When adopting,
+review project-specific contacts, provenance and licenses rather than copying them blindly.
 
 Original material in this repository is licensed under [Apache-2.0](LICENSE). See [NOTICE](NOTICE). Other projects retain their own licenses, copyright, and upstream obligations.

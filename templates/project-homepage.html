@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{LANGUAGE}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
+  <title>{{META_TITLE}}</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳至正文</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#top">{{NAME}}</a>
+    <button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="main-nav" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="主导航">{{NAVIGATION}}</nav>
+    {{REPOSITORY}}
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">{{HERO_TITLE}}</h1>
+        <div class="hero-description">{{HERO_DESCRIPTION}}</div>
+        <div class="hero-actions">{{HERO_ACTIONS}}</div>
+        <p class="release-note">{{RELEASE_NOTE}}</p>
+      </div>
+      <figure class="product-preview">{{PRODUCT_PREVIEW}}</figure>
+    </section>
+    <section class="features section-rule" id="features" aria-labelledby="features-title">
+      <h2 id="features-title">{{FEATURES_TITLE}}</h2>
+      <div class="feature-groups">{{FEATURE_GROUPS}}</div>
+    </section>
+    <section class="getting-started section-rule" id="start" aria-labelledby="start-title">
+      <h2 id="start-title">{{START_TITLE}}</h2>
+      <div class="start-steps">{{START_STEPS}}</div>
+    </section>
+    <section class="community section-rule" id="community" aria-labelledby="community-title">
+      <h2 id="community-title">{{COMMUNITY_TITLE}}</h2>
+      <p>{{COMMUNITY_DESCRIPTION}}</p>
+      <nav class="community-links" aria-label="参与项目">{{COMMUNITY_LINKS}}</nav>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><p>{{COPYRIGHT}} <span aria-hidden="true">·</span> {{LICENSE}}</p></footer>
+</body>
+</html>

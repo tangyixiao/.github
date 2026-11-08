@@ -1,4 +1,4 @@
-name: Check community defaults
+name: Check project template and community defaults
 
 on:
   pull_request:

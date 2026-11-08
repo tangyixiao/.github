@@ -2,19 +2,19 @@
   "schema_version": 1,
   "standard_version": "0.1.0",
   "repository": "tangyixiao/.github",
-  "kind": "community-defaults",
+  "kind": "community-defaults-and-project-template",
   "policy": "Enable every applicable community entry point; keep its purpose and evidence clear.",
   "desired_settings": {
     "issues": true,
     "discussions": true,
     "wiki": true,
     "projects": true,
+    "repository_template": true,
     "private_vulnerability_reporting": true
   },
   "exceptions": {
-    "application_artifacts": "This repository distributes source documents and small tools, not application installers.",
-    "sponsorship": "No eligible sponsorship destination has been confirmed; do not invent a funding link.",
-    "repository_template": "Account community defaults live here; an application starter belongs in a separate template repository."
+    "application_artifacts": "This repository provides a website/community starter, not the demo project's application source or installers.",
+    "sponsorship": "No eligible sponsorship destination has been confirmed; do not invent a funding link."
   },
   "resources": {
     "free_space_reserve_gib": 10,

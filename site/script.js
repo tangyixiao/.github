@@ -1,63 +1,32 @@
 "use strict";
 
-// Preferences are optional: the page remains readable without storage or JavaScript.
-const root = document.documentElement;
-const themeButton = document.querySelector(".theme-toggle");
-const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-let selectedTheme = null;
-try {
-  const storedTheme = localStorage.getItem("toss-theme");
-  if (storedTheme === "light" || storedTheme === "dark") selectedTheme = storedTheme;
-} catch (_) { /* Restricted storage leaves the system preference in control. */ }
+// Navigation links remain visible when JavaScript is disabled.
+document.documentElement.classList.add("js");
 
-function updateThemeButton() {
-  const isDark = (selectedTheme || (systemTheme.matches ? "dark" : "light")) === "dark";
-  if (selectedTheme) root.dataset.theme = selectedTheme;
-  themeButton.setAttribute("aria-pressed", String(isDark));
-  themeButton.setAttribute("aria-label", isDark ? "切换至浅色主题" : "切换至深色主题");
-}
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".main-nav");
 
-themeButton.hidden = false;
-updateThemeButton();
-themeButton.addEventListener("click", () => {
-  const isDark = (selectedTheme || (systemTheme.matches ? "dark" : "light")) === "dark";
-  selectedTheme = isDark ? "light" : "dark";
-  try { localStorage.setItem("toss-theme", selectedTheme); } catch (_) { /* Optional. */ }
-  updateThemeButton();
-});
-systemTheme.addEventListener("change", updateThemeButton);
+if (menuButton && navigation) {
+  menuButton.hidden = false;
 
-const filterTools = document.querySelector(".filter-tools");
-const filters = [...document.querySelectorAll(".filter")];
-const rows = [...document.querySelectorAll(".standard-row")];
-const search = document.querySelector("#standard-search");
-const emptyState = document.querySelector(".empty-state");
-const result = document.querySelector(".filter-result");
-let category = "all";
-filterTools.hidden = false;
+  const setOpen = (open) => {
+    navigation.classList.toggle("is-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "关闭导航" : "打开导航");
+  };
 
-function filterStandards() {
-  const query = search.value.trim().toLocaleLowerCase();
-  let visibleCount = 0;
-  for (const row of rows) {
-    const matchesCategory = category === "all" || row.dataset.category === category;
-    const matchesQuery = row.textContent.toLocaleLowerCase().includes(query);
-    row.hidden = !(matchesCategory && matchesQuery);
-    if (!row.hidden) visibleCount++;
-  }
-  emptyState.hidden = visibleCount > 0;
-  result.textContent = `显示 ${visibleCount} 项标准，共 ${rows.length} 项。`;
-}
+  menuButton.addEventListener("click", () => {
+    setOpen(menuButton.getAttribute("aria-expanded") !== "true");
+  });
 
-for (const button of filters) {
-  button.addEventListener("click", () => {
-    category = button.dataset.filter;
-    for (const filter of filters) {
-      const active = filter === button;
-      filter.classList.toggle("active", active);
-      filter.setAttribute("aria-pressed", String(active));
+  navigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+      setOpen(false);
+      menuButton.focus();
     }
-    filterStandards();
   });
 }
-search.addEventListener("input", filterStandards);
