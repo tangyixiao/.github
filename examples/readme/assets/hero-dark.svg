@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+<title id="title">OJ NEXUS 手机与桌面界面布局示意</title>
+<desc id="desc">手机与桌面并排展示题目浏览、平台入口、主题训练和复习队列的设计示意。平台只以文字和通用圆圈表示，题目与状态均为示例。不是应用实测截图，不代表平台连接成功、练习成绩或发布范围。</desc>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif}
+.canvas{fill:#15191F}.frame{fill:#242A33;stroke:#424A57}.panel{fill:#1E242D}.line{stroke:#343D49}.ink{fill:#E7ECF3}.muted{fill:#A0AEC0}.blue{fill:#88B9FF}.blue-fill{fill:#203B60}.warm{fill:#3B2F20}.warm-text{fill:#EDC184}.green{fill:#203B2B}.green-text{fill:#9CD1AE}.strong{font-weight:650}
+</style>
+<rect class="canvas" x=".5" y=".5" width="959" height="419" rx="12" stroke="#424A57"/>
+<text x="933" y="24" text-anchor="end" font-size="13" class="muted">界面布局示意</text>
+<rect x="28" y="23" width="230" height="374" rx="31" fill="#05080C"/>
+<rect class="panel" x="35" y="30" width="216" height="360" rx="25"/>
+<rect x="116" y="39" width="54" height="5" rx="2.5" fill="#05080C"/>
+<path d="M49 66h10m-10 4h10m-10 4h10" fill="none" stroke="#A0AEC0" stroke-width="1.4"/>
+<text x="143" y="75" text-anchor="middle" font-size="18" class="ink strong">OJ NEXUS</text>
+<circle cx="230" cy="68" r="4" fill="none" stroke="#A0AEC0" stroke-width="1.4"/><path d="m233 71 4 4" stroke="#A0AEC0" stroke-width="1.4"/>
+<rect x="45" y="87" width="45" height="37" rx="5" class="blue-fill"/>
+<text x="67" y="111" text-anchor="middle" font-size="14" class="blue strong">练习</text>
+<text x="118" y="111" text-anchor="middle" font-size="14" class="muted">训练</text>
+<text x="170" y="111" text-anchor="middle" font-size="14" class="muted">复习</text>
+<text x="220" y="111" text-anchor="middle" font-size="14" class="muted">记录</text>
+<text x="49" y="150" font-size="16" class="ink strong">我的平台</text>
+<g fill="none" stroke="#A0AEC0" stroke-width="1.4"><circle cx="56" cy="174" r="5"/><circle cx="56" cy="205" r="5"/><circle cx="56" cy="236" r="5"/></g>
+<text x="71" y="179" font-size="16" class="ink">Codeforces</text>
+<text x="71" y="210" font-size="16" class="ink">AtCoder</text>
+<text x="71" y="241" font-size="16" class="ink">洛谷</text>
+<path d="m230 171 4 4-4 4m0 23 4 4-4 4m0 23 4 4-4 4" fill="none" stroke="#A0AEC0" stroke-width="1.4"/>
+<path d="M49 258h188" class="line"/>
+<text x="49" y="283" font-size="16" class="ink strong">主题训练</text>
+<rect x="47" y="295" width="192" height="34" rx="5" class="warm"/>
+<text x="59" y="318" font-size="15" class="warm-text">二分练习</text>
+<text x="224" y="318" text-anchor="end" font-size="12" class="warm-text">按主题练习</text>
+<rect x="47" y="340" width="192" height="30" rx="5" class="green"/>
+<text x="59" y="360" font-size="14" class="green-text">复习队列</text>
+<path d="m225 350 4 5-4 5" fill="none" stroke="#9CD1AE" stroke-width="1.4"/>
+<rect class="frame" x="280" y="48" width="650" height="324" rx="10"/>
+<path d="M281 86h648" class="line"/>
+<g fill="#4FA1FF" transform="translate(290 53) scale(.4) translate(-32 -30)"><path d="M54 57 54 41M54 57 39 68M54 57 69 68" fill="none" stroke="#4FA1FF" stroke-width="2.5" stroke-linecap="round"/><circle cx="54" cy="57" r="5"/><circle cx="54" cy="41" r="3.5"/><circle cx="39" cy="68" r="3.5"/><circle cx="69" cy="68" r="3.5"/></g>
+<text x="316" y="73" font-size="15" class="ink strong">OJ NEXUS</text>
+<path d="M865 65h8m17-4h7v7h-7zm19 0 7 7m0-7-7 7" fill="none" stroke="#A0AEC0" stroke-width="1.2"/>
+<rect class="panel" x="281" y="87" width="648" height="284" rx="9"/>
+<path d="M393 87v284" class="line"/>
+<rect x="290" y="101" width="93" height="33" rx="5" class="blue-fill"/>
+<text x="307" y="123" font-size="15" class="blue strong">⌂</text><text x="329" y="123" font-size="14" class="blue strong">练习</text>
+<g font-size="14" class="muted"><text x="307" y="158">◇</text><text x="329" y="158">训练</text><text x="307" y="194">↺</text><text x="329" y="194">复习</text><text x="307" y="230">▤</text><text x="329" y="230">记录</text></g>
+<path d="M298 248h77" class="line"/>
+<g font-size="13" class="muted"><text x="307" y="277">平台管理</text><text x="307" y="308">设置</text></g>
+<text x="411" y="120" font-size="19" class="ink strong">题目练习</text>
+<rect x="683" y="102" width="228" height="25" rx="12" class="canvas" stroke="#343D49"/>
+<circle cx="699" cy="113" r="4" fill="none" stroke="#A0AEC0" stroke-width="1.2"/><path d="m702 116 3 3" stroke="#A0AEC0" stroke-width="1.2"/>
+<text x="716" y="119" font-size="12" class="muted">搜索题目或标签</text>
+<rect x="411" y="138" width="42" height="25" rx="5" class="blue-fill"/>
+<text x="432" y="155" text-anchor="middle" font-size="12" class="blue strong">全部</text>
+<text x="468" y="155" font-size="12" class="muted">Codeforces</text><text x="556" y="155" font-size="12" class="muted">AtCoder</text><text x="626" y="155" font-size="12" class="muted">洛谷</text>
+<path d="M410 175h500M410 228h500M410 281h500" class="line"/>
+<circle cx="422" cy="194" r="5" fill="none" stroke="#4FA1FF" stroke-width="1.8"/>
+<text x="438" y="198" font-size="17" class="ink strong">前缀和与区间统计</text>
+<text x="438" y="217" font-size="11" class="muted">Codeforces · 题目示例</text>
+<rect x="713" y="186" width="58" height="24" rx="4" class="warm"/><text x="742" y="202" text-anchor="middle" font-size="12" class="warm-text">前缀和</text>
+<text x="893" y="201" text-anchor="end" font-size="12" class="muted">待练习</text>
+<circle cx="422" cy="247" r="5" fill="none" stroke="#4FA1FF" stroke-width="1.8"/>
+<text x="438" y="251" font-size="17" class="ink strong">二分边界练习</text>
+<text x="438" y="270" font-size="11" class="muted">AtCoder · 题目示例</text>
+<rect x="713" y="239" width="58" height="24" rx="4" class="warm"/><text x="742" y="255" text-anchor="middle" font-size="12" class="warm-text">二分</text>
+<text x="893" y="254" text-anchor="end" font-size="12" class="muted">待练习</text>
+<circle cx="422" cy="300" r="5" fill="none" stroke="#4FA1FF" stroke-width="1.8"/>
+<text x="438" y="304" font-size="17" class="ink strong">最短路径练习</text>
+<text x="438" y="323" font-size="11" class="muted">洛谷 · 题目示例</text>
+<rect x="713" y="292" width="58" height="24" rx="4" class="green"/><text x="742" y="308" text-anchor="middle" font-size="12" class="green-text">图论</text>
+<text x="893" y="307" text-anchor="end" font-size="12" class="muted">待回顾</text>
+<text x="411" y="351" font-size="12" class="muted">按主题安排训练，再回顾做过的题目</text>
+</svg>
