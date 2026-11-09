@@ -1,0 +1,29 @@
+{
+  "title": "[Idea] ",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Discuss an early idea for this repository in English or Chinese. For a project's feature, use that project's Discussions; this hub discusses shared standards. This form requires an existing discussion category with the slug `ideas`. Adding the file does not create or enable the category."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "need",
+      "attributes": {
+        "label": "Need or opportunity",
+        "description": "Who encounters this problem, and what task are they trying to complete?"
+      },
+      "validations": { "required": true }
+    },
+    {
+      "type": "textarea",
+      "id": "idea",
+      "attributes": {
+        "label": "Idea and examples",
+        "description": "Describe a useful outcome and any simpler alternatives. Include disk or maintenance costs if relevant."
+      },
+      "validations": { "required": true }
+    }
+  ]
+}

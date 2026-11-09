@@ -1,0 +1,15 @@
+{
+  "blank_issues_enabled": true,
+  "contact_links": [
+    {
+      "name": "Help and questions / 使用帮助",
+      "url": "https://github.com/tangyixiao/.github/blob/main/SUPPORT.md",
+      "about": "Find the affected project's own help channel and the shared support rules."
+    },
+    {
+      "name": "Report a vulnerability privately / 私密安全报告",
+      "url": "https://github.com/tangyixiao/.github/blob/main/SECURITY.md",
+      "about": "Start with the affected repository's private reporting page. Never publish secrets or vulnerability details in an issue."
+    }
+  ]
+}

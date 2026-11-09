@@ -1,0 +1,48 @@
+{
+  "name": "Feature request / 功能建议",
+  "description": "Propose a concrete improvement for this repository.",
+  "title": "[Feature] ",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "English or Chinese is welcome. Use the affected project's own tracker. For early discussion, use that project's Discussions when available. Requests about these shared standards belong in this hub. Please search existing proposals first."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "need",
+      "attributes": {
+        "label": "Problem or user need",
+        "description": "Describe a real task and the obstacle you encounter."
+      },
+      "validations": { "required": true }
+    },
+    {
+      "type": "textarea",
+      "id": "proposal",
+      "attributes": {
+        "label": "Proposed result",
+        "description": "Describe the outcome, intended users and a concrete example. Implementation detail is optional."
+      },
+      "validations": { "required": true }
+    },
+    {
+      "type": "textarea",
+      "id": "alternatives",
+      "attributes": {
+        "label": "Alternatives and tradeoffs",
+        "description": "Optional workarounds, simpler alternatives, compatibility concerns or disk and maintenance costs."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "acceptance",
+      "attributes": {
+        "label": "How to verify success",
+        "description": "Give observable behavior or a small example that would show the proposal works."
+      },
+      "validations": { "required": true }
+    }
+  ]
+}

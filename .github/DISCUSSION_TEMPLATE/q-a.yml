@@ -1,0 +1,29 @@
+{
+  "title": "[Question] ",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Ask in English or Chinese. Use the affected project's own Discussions for project-specific help. This hub answers questions about shared standards. Do not share credentials or private data. This form requires an existing discussion category with the slug `q-a`; set its format to Question and Answer if answers should be markable. Adding the file does not create or enable the category."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "question",
+      "attributes": {
+        "label": "Question and context",
+        "description": "Describe your goal and where you are stuck. Include the relevant repository or documentation link."
+      },
+      "validations": { "required": true }
+    },
+    {
+      "type": "textarea",
+      "id": "tried",
+      "attributes": {
+        "label": "What you have tried",
+        "description": "Include useful documentation, version details and small redacted examples."
+      },
+      "validations": { "required": true }
+    }
+  ]
+}

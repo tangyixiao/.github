@@ -1,0 +1,23 @@
+Tangyixiao Open Source Standard (TOSS)
+Copyright 2026 Tang Yixiao and contributors
+
+Original documents, tooling, and original site assets in this repository are provided
+under the Apache License, Version 2.0. Project names and third-party links are
+used for identification; they do not imply affiliation or endorsement.
+
+The LICENSE file is the standard Apache License text from the Apache Software
+Foundation. No third-party fonts, analytics, or frontend packages are bundled.
+
+Codeforces, AtCoder, and Luogu are named only to identify the services connected
+by the OJ NEXUS example. These names do not imply affiliation or endorsement.
+The current template displays platform names with an original generic external-link
+icon and does not bundle official platform artwork. No permission from the platform
+owners is claimed.
+
+On 2026-11-09, three official platform images were removed from the current
+distribution. Earlier Git commits may retain those files; their presence in history
+does not establish permission to reuse them.
+
+The localized light/dark site/assets/demo/*.svg files are original illustrative interface
+diagrams. They are labeled demonstrations and are not application screenshots
+or evidence of actual submissions, scores, or learning progress.

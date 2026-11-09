@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "description": "{project} brings Codeforces, AtCoder, and Luogu into one competitive programming client. Organize problems and submissions, plan practice, and review your progress."
+  },
+  "pages": {
+    "home": { "title": "{project} · One place for competitive programming" },
+    "features": {
+      "title": "Features · {project}",
+      "description": "Browse problems, organize submissions, plan practice by topic, and return to problems you have already tried."
+    },
+    "download": {
+      "title": "Get started · {project}",
+      "description": "Download the Android app, connect your online judges, and start organizing your practice."
+    },
+    "community": {
+      "title": "Community · {project}",
+      "description": "Report an issue, suggest a feature, or contribute code and documentation."
+    }
+  },
+  "nav": { "home": "Home", "features": "Features", "download": "Get started", "community": "Community" },
+  "ui": {
+    "skip_link": "Skip to main content",
+    "navigation": "Main navigation",
+    "open_navigation": "Open navigation",
+    "close_navigation": "Close navigation",
+    "language": "Choose language",
+    "theme": "Choose theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "platforms": "Supported platforms",
+    "github": "GitHub",
+    "view_image": "View full illustration",
+    "feature_more": "Explore features",
+    "download": "Download APK",
+    "release_notes": "Release notes",
+    "documentation": "Documentation",
+    "source": "View source",
+    "illustration": "Illustration"
+  },
+  "hero": {
+    "title": [ "Practice, compete, review", "All in one place" ],
+    "description": [ "Keep your online judges together and focus on each problem.", "Organize problems and submissions, plan practice, and review your progress." ],
+    "primary_action": "Download for Android",
+    "secondary_action": "Explore features"
+  },
+  "preview": {
+    "caption": "Interface illustration · Not an app screenshot",
+    "tabs": [
+      { "label": "Problems", "icon": "home" },
+      { "label": "Contests", "icon": "trophy" },
+      { "label": "Practice", "icon": "layers" },
+      { "label": "Review", "icon": "book" }
+    ],
+    "items": [
+      { "title": "Problem practice", "description": "Browse by judge and topic", "icon": "code" },
+      { "title": "Contests", "description": "See upcoming contests", "icon": "trophy" },
+      { "title": "Practice plan", "description": "Work through a topic", "icon": "layers" }
+    ]
+  },
+  "features": {
+    "title": "From practice to review",
+    "groups": [
+      {
+        "title": "Problems and submissions",
+        "description": "Browse and search problems by platform, with your submissions organized in one place.",
+        "detail": "Use topic tags to choose what to practice, then revisit the attempts in your records.",
+        "icon": "code",
+        "image": {
+          "src": "assets/demo/problem-workflow-en.svg",
+          "dark_src": "assets/demo/problem-workflow-en-dark.svg",
+          "alt": "Problem browsing illustration with platform tabs, search, topic tags, and example submission records",
+          "caption": "Problem browsing and submission records · Illustration"
+        }
+      },
+      {
+        "title": "Training and review",
+        "description": "Practice related problems by topic, then revisit completed problems and reflect on your understanding.",
+        "detail": "Make room for both new practice and review in the same plan.",
+        "icon": "layers",
+        "image": {
+          "src": "assets/demo/training-review-en.svg",
+          "dark_src": "assets/demo/training-review-en-dark.svg",
+          "alt": "Training and review illustration with a weekly plan, a focused practice topic, and a review queue",
+          "caption": "Practice planning and review queue · Illustration"
+        }
+      }
+    ]
+  },
+  "getting_started": {
+    "title": "Get started with {project}",
+    "steps": [
+      { "title": "Install the Android app", "description": "Download the APK and install it on your Android device.", "icon": "download" },
+      { "title": "Connect your online judges", "description": "Follow the documentation to add accounts and organize your practice.", "icon": "link" }
+    ]
+  },
+  "community": {
+    "title": "Help improve {project}",
+    "description": "Report a problem, share an idea, or contribute to the project.",
+    "links": [
+      { "label": "Report an issue", "description": "Describe the steps so we can reproduce and fix the problem.", "icon": "code" },
+      { "label": "Suggest a feature", "description": "Share what you need and discuss possible improvements.", "icon": "trophy" },
+      { "label": "Contribute", "description": "Help with code, documentation, or organizing issues.", "icon": "link" }
+    ]
+  },
+  "footer": { "copyright": "{copyright} · {project}" }
+}
