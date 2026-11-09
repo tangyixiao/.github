@@ -154,6 +154,7 @@ class WebsiteTests(unittest.TestCase):
         config = copy.deepcopy(self.config)
         locales = copy.deepcopy(self.locales)
         config["name"] = payload
+        config["copyright_notice"] = payload
         for locale in locales.values():
             locale["meta"]["description"] = payload
             locale["hero"]["title"][0] = payload
@@ -165,6 +166,27 @@ class WebsiteTests(unittest.TestCase):
                 document = Page(source)
                 self.assertFalse(any(any(key.startswith("on") for key in attrs)
                                      for _, attrs in document.elements))
+
+    def test_configured_copyright_replaces_author_in_all_locales(self):
+        config = copy.deepcopy(self.config)
+        config["copyright_notice"] = "© 2026 Atlas contributors"
+        for path, source in self.render_site(config=config).items():
+            with self.subTest(path=path):
+                self.assertIn("© 2026 Atlas contributors", source)
+                self.assertNotIn("tangyixiao and contributors", source)
+                self.assertNotIn("{copyright}", source)
+
+    def test_default_platform_names_do_not_require_bundled_logos(self):
+        for registration in self.config["locales"]:
+            for page in ("home", "features"):
+                source = self.render_site()[output_path(registration, page)]
+                for platform in self.config["platforms"]:
+                    self.assertIn(html.escape(platform["name"]), source)
+                    self.assertIn('href="' + html.escape(platform["href"], quote=True) + '"', source)
+                self.assertNotIn("assets/brands/", source)
+        self.assertFalse((ROOT / "site/assets/brands/codeforces.png").exists())
+        self.assertFalse((ROOT / "site/assets/brands/atcoder.png").exists())
+        self.assertFalse((ROOT / "site/assets/brands/luogu.png").exists())
 
     def test_configured_license_label_and_destination_propagate_to_every_page(self):
         config = copy.deepcopy(self.config)

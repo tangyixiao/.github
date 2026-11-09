@@ -101,6 +101,7 @@ def validate_config(config: dict) -> None:
     _text(c.get("name"), "name")
     _text(c.get("release"), "release")
     _text(c.get("license_label"), "license_label")
+    _text(c.get("copyright_notice"), "copyright_notice")
     if c.get("theme", "light") not in ("light", "dark", "system"):
         raise ValueError("theme must be light, dark or system")
     codes, directories = set(), set()
@@ -128,7 +129,8 @@ def validate_config(config: dict) -> None:
         platform = _object(platform, f"platforms[{i}]")
         _text(platform.get("name"), f"platforms[{i}].name")
         _url(platform.get("href"), f"platforms[{i}].href")
-        _url(platform.get("logo"), f"platforms[{i}].logo", image=True)
+        if platform.get("logo") is not None:
+            _url(platform["logo"], f"platforms[{i}].logo", image=True)
         if not isinstance(platform.get("wordmark", False), bool):
             raise ValueError("platform.wordmark must be a boolean")
     capture = _object(c.get("preview", {}), "preview").get("image")
@@ -238,8 +240,8 @@ def _svg(name, class_name=""):
 
 def _tokens(value, config):
     if isinstance(value, str):
-        values = {"project": config["name"], "release": config["release"]}
-        return re.sub(r"\{(project|release)\}", lambda m: values[m.group(1)], value)
+        values = {"project": config["name"], "release": config["release"], "copyright": config["copyright_notice"]}
+        return re.sub(r"\{(project|release|copyright)\}", lambda m: values[m.group(1)], value)
     if isinstance(value, list):
         return [_tokens(item, config) for item in value]
     return {key: item if key in ("src", "dark_src", "icon") else _tokens(item, config)
@@ -280,6 +282,10 @@ def _platforms(c, t, prefix):
         return ""
     links = []
     for platform in c["platforms"]:
+        if not platform.get("logo"):
+            links.append(f'<a class="platform-link" href="{_href(platform["href"], prefix)}">'
+                         f'<span>{_escape(platform["name"])}</span><span class="platform-arrow" aria-hidden="true">↗</span></a>')
+            continue
         wordmark = platform.get("wordmark", False)
         label = "" if wordmark else f'<span>{_escape(platform["name"])}</span>'
         alt = _escape(platform["name"]) if wordmark else ""

@@ -8,25 +8,15 @@ used for identification; they do not imply affiliation or endorsement.
 The LICENSE file is the standard Apache License text from the Apache Software
 Foundation. No third-party fonts, analytics, or frontend packages are bundled.
 
-The following unmodified platform marks identify the services in the OJ NEXUS
-example. Their trademarks and artwork remain the property of their respective
-owners and are not relicensed under this repository's Apache-2.0 license.
-Source pages and assets were checked on 2026-11-08:
+Codeforces, AtCoder, and Luogu are named only to identify the services connected
+by the OJ NEXUS example. These names do not imply affiliation or endorsement.
+The current template displays platform names with an original generic external-link
+icon and does not bundle official platform artwork. No permission from the platform
+owners is claimed.
 
-- Codeforces: https://codeforces.com/
-  Official favicon: https://codeforces.com/codeforces.org/s/95148/favicon-96x96.png
-  Local file: site/assets/brands/codeforces.png
-- AtCoder: https://atcoder.jp/
-  Official apple-touch-icon: https://img.atcoder.jp/assets/atcoder.png
-  Local file: site/assets/brands/atcoder.png
-  Usage guide: https://info.atcoder.jp/logoguide
-  This is the homepage touch icon, not one of the guide's three downloadable
-  logo files. The guide requests notification for media/service use and prohibits
-  distortion, recoloring, hotlinking and implied endorsement. No notification
-  has been sent on the adopter's behalf, and no extra permission is claimed.
-- Luogu: https://www.luogu.com.cn/
-  Official logo: https://fecdn.luogu.com.cn/columba/static.08b304e3faa27052.logo-full.png
-  Local file: site/assets/brands/luogu.png
+On 2026-11-09, three official platform images were removed from the current
+distribution. Earlier Git commits may retain those files; their presence in history
+does not establish permission to reuse them.
 
 The localized light/dark site/assets/demo/*.svg files are original illustrative interface
 diagrams. They are labeled demonstrations and are not application screenshots

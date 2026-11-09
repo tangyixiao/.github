@@ -103,5 +103,5 @@
       { "label": "参与贡献", "description": "通过代码、文档或问题整理，一起完善项目。", "icon": "link" }
     ]
   },
-  "footer": { "copyright": "{project}" }
+  "footer": { "copyright": "{copyright} · {project}" }
 }

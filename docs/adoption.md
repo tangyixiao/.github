@@ -16,12 +16,16 @@ package installation is required. Keep the source template and configuration so
 the next content update can be rendered consistently.
 
 Schema 2 separates shared data from translations. Edit `project.json` with actual
-identity, URLs, release information, default theme and locale registration. Edit
-`license_label` and `links.license` together to describe the receiving project's
-actual license; this does not replace that project's license text. Edit
+identity, URLs, release information, default theme and locale registration. Set
+`copyright_notice` to the receiving project's actual copyright notice. This visible
+credit is separate from the license: edit `license_label` and `links.license`
+together to describe the project's actual license. These fields do not replace
+its license text. Edit
 `locales/<code>.json` for page titles, descriptions, features, navigation, captions
-and accessible control labels. `{project}` and `{release}` in text insert the shared
-name and release; asset paths and icon names are never expanded. The sample's OJ NEXUS release links are
+and accessible control labels. `{project}`, `{release}` and `{copyright}` in text
+insert the shared name, release and copyright notice; asset paths and icon names
+are never expanded. The default footer is `{copyright} · {project}` in both languages.
+The sample's OJ NEXUS release links are
 real, but belong to OJ NEXUS; update them before publishing another project.
 
 Four pages are generated for each registered locale: `index.html`, `features.html`,
@@ -50,28 +54,28 @@ To use a captured product image, set `preview.image: {src}` in `project.json` an
 tabs/items in that dictionary with these image descriptions if no longer needed.
 Place the capture beneath `site/` and identify it accurately.
 
-The optional `platforms` array supplies service names, links and local `logo`
-paths. Use `wordmark: true` for artwork that already contains the full name;
-otherwise the platform name appears beside its icon. Remove the array for a
-project that does not connect external platforms. The sample marks preserve
-their original colors and proportions; their sources and rights are in `NOTICE`.
-Check the receiving project's intended use against the owner's requirements,
-including AtCoder's media/service notification requirement, before publication.
+The optional `platforms` array defaults to entries containing only `{name, href}`.
+Each entry displays the service name with an original generic external-link icon;
+no official brand image download is needed. Remove the array for a project that
+does not connect external platforms. Optional local `logo` paths remain supported;
+use them only for artwork you own or have clear permission to use, and record its
+source and applicable terms. Set `wordmark: true` when permitted artwork already
+contains the full name; otherwise the platform name appears beside it.
 
 Each translated feature group can use `image: {src, dark_src, alt, caption}` instead of its small
 `preview` rows. Image paths must be local to `site/`; place a real capture or
 original illustration in `site/assets/`. The sample's warm and green SVG panels
 are labeled demonstrations, not application screenshots. Replace or remove the
-OJ-specific marks and illustrations when adopting this for another product.
+OJ-specific platform entries and illustrations when adopting this for another product.
 Keep captions accurate. `dark_src` is optional; when provided, both the displayed
-image and full-size link follow the selected theme. Official marks are never inverted.
+image and full-size link follow the selected theme.
 
 The source-size limits in `.github/toss.json` are budgets for this small starter.
 Review them when adding a real screenshot or application source; choose an explicit
 reasonable budget for that project rather than silently disabling the checks.
 Keep large release assets in the project's release/distribution channel.
-This starter's site budget is 256 KiB for eight HTML pages, shared scripts/styles,
-three platform PNGs and eight small localized light/dark SVGs. The complete source
+This starter's site budget is 256 KiB for eight HTML pages, shared scripts/styles
+and eight small localized light/dark SVGs. The complete source
 budget remains 512 KiB. Neither budget includes release binaries or dependencies.
 
 ```sh

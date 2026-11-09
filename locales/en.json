@@ -103,5 +103,5 @@
       { "label": "Contribute", "description": "Help with code, documentation, or organizing issues.", "icon": "link" }
     ]
   },
-  "footer": { "copyright": "{project}" }
+  "footer": { "copyright": "{copyright} · {project}" }
 }

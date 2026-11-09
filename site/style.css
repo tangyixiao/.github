@@ -120,6 +120,7 @@ h3 { font-size: 23px; line-height: 1.45; font-weight: 700; }
 .platform-link:not(.wordmark) img { background: #fff; padding: 2px; border-radius: 3px; }
 .platform-link.wordmark img { width: 91px; height: 46px; }
 .platform-link:hover { text-decoration: none; opacity: 0.8; }
+.platform-arrow { color: var(--blue); font-size: 13px; }
 .hero-actions { display: flex; gap: 16px; margin-top: 28px; flex-wrap: wrap; }
 .button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; padding: 10px 25px; border: 1px solid; border-radius: 5px; font-size: 17px; line-height: 1.5; font-weight: 650; text-decoration: none; }
 .button:hover { text-decoration: none; }

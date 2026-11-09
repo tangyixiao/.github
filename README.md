@@ -9,14 +9,18 @@ visitors start using it or participate.
 ## Make it your project's website
 
 The website uses **OJ NEXUS** as example content across Home, Features, Get started
-and Community pages. Shared identity, releases, URLs and locale registration come
-from [`project.json`](project.json); complete Chinese and English content comes from
+and Community pages. Shared identity, copyright notice, license label, releases,
+URLs and locale registration come from [`project.json`](project.json); complete Chinese and English content comes from
 `locales/`. Visitors can choose light, dark or system appearance. The example does not include the OJ NEXUS application
 source or an installer. Its drawn interface is explicitly labelled as an illustration.
+Platform names appear as text with an original generic external-link icon; the
+current template does not bundle official platform artwork. The original SVG
+interface illustrations remain included.
 
 1. After the sample is merged and template mode is enabled, create a repository
    from it; during review, use the PR branch or copy its website files into an existing project.
-2. Edit `project.json` with your project's identity and URLs, and `locales/*.json`
+2. Edit `project.json` with your project's identity, `copyright_notice`,
+   `license_label` and URLs, and `locales/*.json`
    with its translated content. Replace the
    illustration with a real screenshot when available; provide meaningful alternative text.
 3. Render and check the site:
