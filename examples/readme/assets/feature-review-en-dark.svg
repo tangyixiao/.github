@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="120" viewBox="0 0 260 120" role="img" aria-labelledby="title desc" lang="en">
+<title id="title">Plan your reviews</title>
+<desc id="desc">Plan your reviews · Revisit solved problems</desc>
+<rect x=".5" y=".5" width="259" height="119" rx="8" fill="#1B2D22" stroke="#365840"/>
+<g transform="translate(21 14)" fill="none" stroke="#92CDA3" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 6h23v23H5zM5 12h23M10 2v8m13-8v8M10 18h5m5 0h3m-13 6h8"/></g>
+<g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif">
+<text x="21" y="76" font-size="20" font-weight="650" fill="#E0F0E5">Plan your reviews</text>
+<text x="21" y="101" font-size="13.5" fill="#ACCEB6">Revisit solved problems</text>
+</g>
+</svg>

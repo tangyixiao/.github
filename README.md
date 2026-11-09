@@ -4,7 +4,7 @@ A reusable multilingual project website, community defaults, and practical maint
 rules. The website introduces a project's purpose, shows its experience, and helps
 visitors start using it or participate.
 
-[简体中文](README.zh-CN.md) · [Use the template](docs/adoption.md) · [Project standard](docs/standard.md) · [Contribute](CONTRIBUTING.md)
+[简体中文](README.zh-CN.md) · [Use the template](docs/adoption.md) · [README showcase](examples/readme/README.en.md) · [Project standard](docs/standard.md) · [Contribute](CONTRIBUTING.md)
 
 ## Make it your project's website
 
@@ -17,8 +17,8 @@ Platform names appear as text with an original generic external-link icon; the
 current template does not bundle official platform artwork. The original SVG
 interface illustrations remain included.
 
-1. After the sample is merged and template mode is enabled, create a repository
-   from it; during review, use the PR branch or copy its website files into an existing project.
+1. Create a repository with this repository's template mode, or copy only the
+   website files you need into an existing project.
 2. Edit `project.json` with your project's identity, `copyright_notice`,
    `license_label` and URLs, and `locales/*.json`
    with its translated content. Replace the
@@ -43,6 +43,11 @@ frontend build, remote font or analytics service. Read the [adoption guide](docs
 for copying only the website, adjusting community contacts, and configuring publishing.
 
 ## Included
+
+The [README showcase](examples/readme/README.en.md) has native bilingual text,
+small light/dark product and status cards, release links and a data-generated
+Star History chart. Its [adoption guide](examples/readme/ADOPTING.md) explains
+identity, asset rights, external services and version maintenance.
 
 | Part | Purpose |
 | --- | --- |

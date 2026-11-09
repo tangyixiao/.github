@@ -1,15 +1,17 @@
 # 项目官网与社区模板
 
-[English](README.md) · [完整规范](docs/standard.md) · [接入方法](docs/adoption.md) · [贡献说明](CONTRIBUTING.md)
+[English](README.md) · [README 样板](examples/readme/README.md) · [完整规范](docs/standard.md) · [接入方法](docs/adoption.md) · [贡献说明](CONTRIBUTING.md)
 
 一份可以换成自己项目内容的官网模板，配套社区入口、贡献流程和维护规范。访客首先看到项目用途、产品画面与使用方式，需要时再进入文档和社区。
 
 当前用 OJ NEXUS 的真实项目信息演示布局。示例不包含它的应用源码或安装包；绘制的界面明确标为布局示意，不冒充实测截图。
 平台入口默认使用文字名称和原创通用外链图标，当前模板不再捆绑官方品牌图片，原生 SVG 界面演示图继续保留。
 
+[README 样板](examples/readme/README.md)提供中英文原生正文、深浅色产品与阶段卡片、真实发行入口和数据生成的 Star History 图。[采用说明](examples/readme/ADOPTING.md)列出身份、素材权利、外部服务和版本更新边界。
+
 ## 换成自己的项目
 
-1. 样板合并并启用模板模式后，可用它创建仓库；审查阶段先看 PR 分支，或只把其中官网相关文件接入现有项目。
+1. 可通过本仓库的模板模式创建仓库，或只把需要的官网文件接入现有项目。
 2. 在 [`project.json`](project.json) 中填写共用名称、`copyright_notice` 版权文字、`license_label` 许可名称、版本、链接和语言目录，在 `locales/*.json` 中填写各语言文案。已有真实截图时，用它替换示意界面，并提供图片说明。
 3. 渲染并检查页面：
 
