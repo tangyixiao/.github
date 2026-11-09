@@ -56,9 +56,10 @@ English and Chinese contributions are welcome. Use the affected project's own
 issue tracker for its bugs and feature requests. This repository's tracker covers
 the shared template and defaults; private reports follow [SECURITY.md](SECURITY.md).
 
-**Review status:** supported account defaults activate only after merge to the
-default branch. The current Pages site still comes from `project-pages`; this PR
-proposes `site/` as its replacement without changing that existing publishing source.
+Supported account defaults are read from the default branch. The website source
+in `site/` and repository-template copies are adopted separately. The existing
+Pages root uses `project-pages`; the [website preview](https://tangyixiao.github.io/.github/previews/pr-1/)
+is published in its own directory without replacing that root.
 
 ## Know the boundary
 
