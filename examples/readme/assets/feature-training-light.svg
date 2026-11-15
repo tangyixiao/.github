@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="120" viewBox="0 0 260 120" role="img" aria-labelledby="title desc" lang="zh-CN">
+<title id="title">训练与笔记</title>
+<desc id="desc">训练与笔记 · 按主题组织练习</desc>
+<rect x=".5" y=".5" width="259" height="119" rx="8" fill="#FFF7E9" stroke="#F2DBB1"/>
+<g transform="translate(21 14)" fill="none" stroke="#BD780F" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m7 22 2-7L22 2l7 7-13 13-7 2-2-2Zm4-9 7 7M23 4l4 4M4 30h25"/></g>
+<g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif">
+<text x="21" y="76" font-size="21" font-weight="650" fill="#3D301D">训练与笔记</text>
+<text x="21" y="101" font-size="14" fill="#796144">按主题组织练习</text>
+</g>
+</svg>

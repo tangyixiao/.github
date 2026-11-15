@@ -4,9 +4,8 @@
 
 ## Create a project website
 
-After this sample is merged and template mode is enabled, start from the repository's
-**Use this template** entry. During review, use the PR branch or copy its website
-into an existing project. The public page should describe the receiving project itself.
+Start from the repository's **Use this template** entry, or copy the website
+files into an existing project. The public page should describe the receiving project itself.
 The default OJ NEXUS content demonstrates the layout; it is not the identity of
 every project that adopts the template.
 
@@ -106,10 +105,12 @@ When copying community files, adapt contacts, source attribution and contributio
 instructions to the receiving project. Never replace an existing application's
 license merely because this starter is Apache-2.0.
 
-## Activate the sample
+## Adopt community defaults
 
-1. Review the PR, its exact changed files, checks, and local site preview.
-2. Merge only after review. Supported defaults become eligible on the default branch.
+1. Review the receiving project's changes, checks, and local site preview.
+2. Merge the adoption PR into that project's default branch after review.
+   Account defaults are read from the account's public `.github` repository;
+   project-local files can override supported inherited defaults.
 3. Verify the target project's community links and new-issue form in the GitHub UI.
    A local Issue template/configuration can replace the entire inherited set.
 4. Treat other repositories separately: do not overwrite their existing community
@@ -142,16 +143,15 @@ Do not create sponsor destinations, sample community posts, or empty boards to
 inflate a completion score. Establish real content when its purpose is defined.
 No test submission to Issues/Discussions is needed to prove a form can open.
 
-### Existing Pages site
+### Publish or replace a Pages site
 
-At initial inspection on 2026-11-08, Pages used the `project-pages` branch at `/`.
-That branch is outside this PR. The new `site/` is a proposed source. Preview it
-locally before changing the publishing source. Configure all public project links
-for the receiving project before publishing it.
+Inspect the receiving repository's current Pages source and deployed revision.
+Preview `site/` locally and configure its public project links before publishing.
+Keep the current publishing source and revision available for recovery.
 
-The included `pages.yml` is manual and restricted to `main`. After this PR is
-merged and replacing the current site is authorized, select GitHub Actions as
-the Pages source, then run it. The workflow does not automatically replace a
+The included `pages.yml` is manual and restricted to `main`. Once the receiving
+project's site source is on `main` and a publishing-source change is authorized,
+select GitHub Actions as the Pages source and run the workflow. It does not automatically replace a
 legacy branch-based site. If the new site fails, restore the previous publishing
 source or deploy the previous accepted revision and verify the URL again.
 

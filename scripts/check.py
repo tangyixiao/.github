@@ -214,6 +214,11 @@ def main():
             text = re.sub(r"```.*?```", "", text, flags=re.S)
             for link in re.findall(r"\[[^\]]*\]\(<?([^\s)>]+)>?(?:\s+\"[^\"]*\")?\)", text):
                 check_link(path, link)
+            # README pictures also have local light/dark HTML image sources.
+            page = Page()
+            page.feed(text)
+            for link in page.links:
+                check_link(path, link)
         # The source template contains slots. Inspect its rendered site instead.
         if path.suffix.lower() == ".html" and not path.is_relative_to(ROOT / "templates"):
             page = Page()
