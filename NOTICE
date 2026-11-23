@@ -21,3 +21,10 @@ does not establish permission to reuse them.
 The localized light/dark site/assets/demo/*.svg files are original illustrative interface
 diagrams. They are labeled demonstrations and are not application screenshots
 or evidence of actual submissions, scores, or learning progress.
+
+The OJ NEXUS logo in examples/readme/assets/logo.svg follows the project's
+Apache-2.0 Android vector at:
+https://github.com/tangyixiao/OJ-NEXUS/blob/5a8134723680f9743d7e59f9a3244c4ced55fe8a/app/src/main/res/drawable/ic_launcher_foreground.xml
+The hero, feature and status SVGs in that directory are original README
+illustrations. External Star History charts and Shields badges are embedded
+service-generated images and are not bundled source assets.
